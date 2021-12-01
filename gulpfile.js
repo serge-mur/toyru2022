@@ -76,7 +76,7 @@ gulp.task('css:build', function() {
 });
 
 // move bootstrap js
-gulp.task('bootstrap_js:build', function() {
+gulp.task('vendor_js:build', function() {
     return gulp.src('assets/src/js/vendor/**/*.*')
         .pipe(gulp.dest(path.build.js));
 });
@@ -132,7 +132,7 @@ gulp.task('build',
         gulp.parallel(
             'html:build',
             'css:build',
-            'bootstrap_js:build',
+            'vendor_js:build',
             'js:build',
             'fonts:build',
             'image:build'
