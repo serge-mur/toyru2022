@@ -2,13 +2,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     const swiper = new Swiper('.swiper', {
         // Optional parameters
-        direction: 'vertical',
         loop: true,
 
         // If we need pagination
-        pagination: {
-            el: '.swiper-pagination',
-        },
+        // pagination: {
+        //     el: '.swiper-pagination',
+        // },
 
         // Navigation arrows
         navigation: {
@@ -17,9 +16,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
         },
 
         // And if we need scrollbar
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
+        // scrollbar: {
+        //     el: '.swiper-scrollbar',
+        // },
     });
 
 });
