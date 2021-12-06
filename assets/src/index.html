@@ -12,26 +12,157 @@
     </div>
 
     <main class="main">
-        <!-- Slider main container -->
-        <div class="swiper">
-            <!-- Additional required wrapper -->
-            <h3>test swiper</h3>
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide"><img class="img-fluid" src="img/banner.png" alt=""></div>
-                <div class="swiper-slide"><img class="img-fluid" src="img/banner.png" alt=""></div>
-                <div class="swiper-slide"><img class="img-fluid" src="img/banner.png" alt=""></div>
+
+        <section class="top-banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-9">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img class="img-fluid" src="img/banner.png" alt=""></div>
+                                <div class="swiper-slide"><img class="img-fluid" src="img/banner.png" alt=""></div>
+                                <div class="swiper-slide"><img class="img-fluid" src="img/banner.png" alt=""></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <a href="#">
+                            <img class="img-fluid" src="img/banner_1.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img class="img-fluid" src="img/banner_2.png" alt="">
+                        </a>
+                    </div>
+                </div>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
+        </section>
 
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+        <section class="age-selection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                        <a href="#"><img src="img/icons/age_0_1_icon.svg" alt=""> 0-1 года</a>
+                    </div>
 
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
-        </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-categories">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="section-name">Популярные категории</h2>
+                    </div>
+                    <div class="col-3">
+                        <a href="#">
+                            <img class="img-fluid" src="img/main_cat_1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-3">
+                        <a href="#">
+                            <img class="img-fluid" src="img/main_cat_2.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img class="img-fluid" src="img/main_cat_3.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-3">
+                        <a href="#">
+                            <img class="img-fluid" src="img/main_cat_4.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-3">
+                        <a href="#">
+                            <img class="img-fluid" src="img/main_cat_5.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img class="img-fluid" src="img/main_cat_6.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-trends">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="section-name">Тренды</h2>
+                    </div>
+                    <div class="col-12">
+                        <ul class="nav nav-pills mb-3" id="trends-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="trends-1-tab" data-bs-toggle="pill" data-bs-target="#trends-1" type="button" role="tab" aria-controls="trends-1" aria-selected="true">Новинки LEGO</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="trends-2-tab" data-bs-toggle="pill" data-bs-target="#trends-2" type="button" role="tab" aria-controls="trends-2" aria-selected="false">Куклы Baby Born</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="trends-3-tab" data-bs-toggle="pill" data-bs-target="#trends-3" type="button" role="tab" aria-controls="trends-3" aria-selected="false">Холодное Сердце</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="trends-tabContent">
+                            <div class="tab-pane fade show active" id="trends-1" role="tabpanel" aria-labelledby="trends-1-tab">
+                                <a href="#">
+                                    <img style="height: 478px;" src="img/card_banner.png" alt="">
+                                </a>
+                            </div>
+                            <div class="tab-pane fade" id="trends-2" role="tabpanel" aria-labelledby="trends-2-tab">2</div>
+                            <div class="tab-pane fade" id="trends-3" role="tabpanel" aria-labelledby="trends-3-tab">3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="full-page-banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <a href="#" class="rm-banner">
+                            <img class="img-fluid" src="img/rm_banner.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="current-promotions">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="section-name">Текущие акции</h2>
+                    </div>
+                    <div class="col-12">
+                        <div class="swiper swiper-action">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-wrapper">
+                                <!-- <div class="swiper-slide"><img class="img-fluid" src="img/action_banner_1.png" alt=""></div> -->
+                                <div class="swiper-slide"><img class="img-fluid" src="img/action_banner_2.png" alt=""></div>
+                                <div class="swiper-slide"><img class="img-fluid" src="img/action_banner_3.png" alt=""></div>
+                                <!-- <div class="swiper-slide"><img class="img-fluid" src="img/action_banner_1.png" alt=""></div> -->
+                                <div class="swiper-slide"><img class="img-fluid" src="img/action_banner_2.png" alt=""></div>
+                                <div class="swiper-slide"><img class="img-fluid" src="img/action_banner_3.png" alt=""></div>
+                                <!-- <div class="swiper-slide"><img class="img-fluid" src="img/action_banner_1.png" alt=""></div> -->
+                                <div class="swiper-slide"><img class="img-fluid" src="img/action_banner_2.png" alt=""></div>
+                                <div class="swiper-slide"><img class="img-fluid" src="img/action_banner_3.png" alt=""></div>
+                                <!-- <div class="swiper-slide"><img class="img-fluid" src="img/action_banner_1.png" alt=""></div> -->
+                                <div class="swiper-slide"><img class="img-fluid" src="img/action_banner_2.png" alt=""></div>
+                                <div class="swiper-slide"><img class="img-fluid" src="img/action_banner_3.png" alt=""></div>
+
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     @@include('./template/footer.html')
