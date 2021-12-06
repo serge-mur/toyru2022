@@ -40,6 +40,7 @@ var gulp = require('gulp'), // include Gulp
     cache = require('gulp-cache'), // module for caching
     imagemin = require('gulp-imagemin'), // plugin for compressing PNG, JPEG, GIF and SVG images
     jpegrecompress = require('imagemin-jpeg-recompress'), // jpeg compression plugin
+    svgSprite = require('gulp-svg-sprite'),
     pngquant = require('imagemin-pngquant'), // png compression plugin
     del = require('del'), // plugin for deleting files and directories
     rename = require('gulp-rename');
@@ -116,6 +117,18 @@ gulp.task('image:build', function() {
         .pipe(gulp.dest(path.build.img)); // output ready files
 });
 
+gulp.task('svg-sprite', function() {
+    return gulp.src('assets/src/img/icons/*.svg') // svg files for sprite
+        .pipe(svgSprite({
+            mode: {
+                stack: {
+                    sprite: "../sprite.svg" //sprite file name
+                }
+            },
+        }))
+        .pipe(gulp.dest('assets/build/img/'));
+});
+
 // remove catalog build
 gulp.task('clean:build', function() {
     return del(path.clean);
@@ -135,6 +148,7 @@ gulp.task('build',
             'vendor_js:build',
             'js:build',
             'fonts:build',
+            'svg-sprite',
             'image:build'
         )
     )
