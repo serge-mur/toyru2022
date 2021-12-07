@@ -6,5 +6,56 @@ $body-color: #333333;
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
 @import './node_modules/bootstrap/scss/bootstrap.scss';
 @import './node_modules/swiper/swiper.scss';
-@import './node_modules/swiper/modules/navigation/navigation.scss';
+// @import './node_modules/swiper/modules/navigation/navigation.scss';
+@import './node_modules/swiper/modules/pagination/pagination.scss';
 // css
+// sliders css
+// swiper-main
+.swiper-main .swiper-button-prev,
+.swiper-main .swiper-button-next {
+    position: absolute;
+    display: block;
+    top: calc(50% - 68px/2);
+    width: 32px;
+    height: 68px;
+    z-index: 10;
+    cursor: pointer;
+    &.swiper-button-disabled {
+        opacity: 0.35;
+        cursor: auto;
+        pointer-events: none;
+    }
+}
+
+.swiper-main .swiper-button-prev {
+    background-image: url(../img/slider_left.svg);
+    left: 0;
+}
+
+.swiper-main .swiper-button-next {
+    background-image: url(../img/slider_right.svg);
+    right: 0;
+}
+
+// swiper-swiper-action
+.swiper-outside-button-prev,
+.swiper-outside-button-next {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    z-index: 10;
+    cursor: pointer;
+    &.swiper-button-disabled {
+        opacity: 0.35;
+        cursor: auto;
+        pointer-events: none;
+    }
+}
+
+.swiper-outside-button-prev {
+    background-image: url(../img/slider_left_v2.svg);
+}
+
+.swiper-outside-button-next {
+    background-image: url(../img/slider_right_v2.svg);
+}

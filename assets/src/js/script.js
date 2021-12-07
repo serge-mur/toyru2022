@@ -1,39 +1,25 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 
-    const swiper = new Swiper('.swiper', {
-        // Optional parameters
+    const swiperMain = new Swiper(".swiper-main", {
         loop: true,
-
-        // If we need pagination
-        // pagination: {
-        //     el: '.swiper-pagination',
-        // },
-
-        // Navigation arrows
+        pagination: {
+            el: '.swiper-pagination',
+        },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-
-        // And if we need scrollbar
-        // scrollbar: {
-        //     el: '.swiper-scrollbar',
-        // },
     });
 
     const swiperAction = new Swiper(".swiper-action", {
         slidesPerView: 4,
+        slidesPerGroup: 4,
         spaceBetween: 30,
-        grabCursor: true,
-        // freeMode: true,
+        freeMode: true,
         autoHeight: true,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
+            nextEl: '.swiper-action-nav .swiper-outside-button-next',
+            prevEl: '.swiper-action-nav .swiper-outside-button-prev',
         },
     });
 

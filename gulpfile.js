@@ -117,17 +117,44 @@ gulp.task('image:build', function() {
         .pipe(gulp.dest(path.build.img)); // output ready files
 });
 
+/*
 gulp.task('svg-sprite', function() {
     return gulp.src('assets/src/img/icons/*.svg') // svg files for sprite
         .pipe(svgSprite({
+            shape: {
+                dimension: {
+                    maxWidth: 500,
+                    maxHeight: 500
+                },
+                spacing: {
+                    padding: 0
+                },
+                transform: [{
+                    "svgo": {
+                        "plugins": [
+                            { removeViewBox: false },
+                            { removeUnusedNS: false },
+                            { removeUselessStrokeAndFill: false },
+                            { cleanupIDs: false },
+                            { removeComments: true },
+                            { removeEmptyAttrs: true },
+                            { removeEmptyText: true },
+                            { collapseGroups: true },
+                            { removeAttrs: { attrs: '(fill|stroke|style)' } }
+                        ]
+                    }
+                }]
+            },
             mode: {
                 stack: {
-                    sprite: "../sprite.svg" //sprite file name
+                    dest: '.',
+                    sprite: 'sprite.svg'
                 }
-            },
+            }
         }))
         .pipe(gulp.dest('assets/build/img/'));
 });
+*/
 
 // remove catalog build
 gulp.task('clean:build', function() {
@@ -148,7 +175,7 @@ gulp.task('build',
             'vendor_js:build',
             'js:build',
             'fonts:build',
-            'svg-sprite',
+            // 'svg-sprite',
             'image:build'
         )
     )

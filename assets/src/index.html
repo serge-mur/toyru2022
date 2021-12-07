@@ -7,9 +7,7 @@
 
 <body>
 
-    <div class="header">
-        <h1>header</h1>
-    </div>
+    @@include('./template/header.html')
 
     <main class="main">
 
@@ -17,7 +15,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-9">
-                        <div class="swiper">
+                        <div class="swiper swiper-main">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide"><img class="img-fluid" src="img/banner.png" alt=""></div>
                                 <div class="swiper-slide"><img class="img-fluid" src="img/banner.png" alt=""></div>
@@ -28,7 +26,7 @@
                             <div class="swiper-button-next"></div>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3 d-flex flex-column justify-content-between">
                         <a href="#">
                             <img class="img-fluid" src="img/banner_1.png" alt="">
                         </a>
@@ -44,7 +42,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-2">
-                        <a href="#"><img src="img/sprite.svg#age_0_1_icon.svg" alt=""> 0-1 года</a>
+                        <a href="#"><img src="img/icons/age_0_1_icon.svg" alt=""> 0-1 года</a>
                     </div>
 
                 </div>
@@ -62,7 +60,7 @@
                             <img class="img-fluid" src="img/main_cat_1.png" alt="">
                         </a>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3 d-flex flex-column justify-content-between">
                         <a href="#">
                             <img class="img-fluid" src="img/main_cat_2.png" alt="">
                         </a>
@@ -75,7 +73,7 @@
                             <img class="img-fluid" src="img/main_cat_4.png" alt="">
                         </a>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3 d-flex flex-column justify-content-between">
                         <a href="#">
                             <img class="img-fluid" src="img/main_cat_5.png" alt="">
                         </a>
@@ -107,9 +105,25 @@
                         </ul>
                         <div class="tab-content" id="trends-tabContent">
                             <div class="tab-pane fade show active" id="trends-1" role="tabpanel" aria-labelledby="trends-1-tab">
-                                <a href="#">
-                                    <img style="height: 478px;" src="img/card_banner.png" alt="">
-                                </a>
+
+                                <div class="row">
+                                    <div class="col-3">
+                                        <a href="#">
+                                            <img class="img-fluid" src="img/card_banner.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-3">
+                                        @@include('./template/card_preview.html')
+                                    </div>
+                                    <div class="col-3">
+                                        @@include('./template/card_preview.html')
+                                    </div>
+                                    <div class="col-3">
+                                        @@include('./template/card_preview.html')
+                                    </div>
+                                </div>
+
+
                             </div>
                             <div class="tab-pane fade" id="trends-2" role="tabpanel" aria-labelledby="trends-2-tab">2</div>
                             <div class="tab-pane fade" id="trends-3" role="tabpanel" aria-labelledby="trends-3-tab">3</div>
@@ -119,7 +133,7 @@
             </div>
         </section>
 
-        <section class="full-page-banner">
+        <section class="full-page-banner mb-5">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -134,13 +148,15 @@
         <section class="current-promotions">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 d-flex justify-content-between">
                         <h2 class="section-name">Текущие акции</h2>
+                        <div class="swiper-action-nav">
+                            <div class="swiper-outside-button-prev"></div>
+                            <div class="swiper-outside-button-next"></div>
+                        </div>
                     </div>
                     <div class="col-12">
                         <div class="swiper swiper-action">
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
                             <div class="swiper-wrapper">
                                 <!-- <div class="swiper-slide"><img class="img-fluid" src="img/action_banner_1.png" alt=""></div> -->
                                 <div class="swiper-slide"><img class="img-fluid" src="img/action_banner_2.png" alt=""></div>
