@@ -1,8 +1,41 @@
 // Default variable overrides
+// scss-docs-start theme-color-variables
+$primary: #ED4F00;
+$secondary: #FFF6EF;
+// Body
+//
+// Settings for the `<body>` element.
+$body-bg: #ffffff;
+$body-color: #333333;
+// Links
+//
+// Style anchor elements.
+$link-color: $primary;
+$link-decoration: underline dotted;
+$link-hover-color: $primary;
+$link-hover-decoration: none;
+// scss-docs-start border-radius-variables
+$border-radius: 20px;
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
 $font-family-base: 'Nunito',
 sans-serif;
-$body-color: #333333;
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+// scss-docs-start btn-variables
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius: 10px;
 // Import
+// Navs
+// scss-docs-start nav-variables
+$nav-link-color: $body-color;
+$nav-link-hover-color: $body-color;
+$nav-pills-border-radius: 100px;
+$nav-pills-link-active-color: $primary;
+$nav-pills-link-active-bg: $secondary;
+// scss-docs-end nav-variables
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
 @import './node_modules/bootstrap/scss/bootstrap.scss';
 @import './node_modules/swiper/swiper.scss';
@@ -11,6 +44,12 @@ $body-color: #333333;
 @import './node_modules/swiper/modules/free-mode/free-mode.scss';
 @import './node_modules/swiper/modules/grid/grid.scss';
 // css
+// base
+a {
+    text-decoration-thickness: .125em;
+    text-underline-offset: 3px;
+}
+
 // sliders css
 // swiper-main
 .swiper-main .swiper-button-prev,
