@@ -15,7 +15,7 @@ $link-decoration: underline dotted;
 $link-hover-color: $primary;
 $link-hover-decoration: none;
 // scss-docs-start border-radius-variables
-$border-radius: 20px;
+$border-radius: 0;
 // Typography
 //
 // Font, line-height, and color for body text, headings, and more.
@@ -26,13 +26,13 @@ sans-serif;
 // For each of Bootstrap's buttons, define text, background, and border color.
 // scss-docs-start btn-variables
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius: 10px;
+$btn-border-radius: 0;
 // Import
 // Navs
 // scss-docs-start nav-variables
 $nav-link-color: $body-color;
 $nav-link-hover-color: $body-color;
-$nav-pills-border-radius: 100px;
+$nav-pills-border-radius: 0;
 $nav-pills-link-active-color: $primary;
 $nav-pills-link-active-bg: $secondary;
 // scss-docs-end nav-variables
@@ -55,6 +55,100 @@ $nav-pills-link-active-bg: $secondary;
 a {
     text-decoration-thickness: .125em;
     text-underline-offset: 3px;
+}
+
+.btn-gradient {
+    background: linear-gradient(to right, #E95322, #FF8F00);
+    border: transparent;
+    color: #fff;
+}
+
+.btn-gradient:hover {
+    color: #fff;
+}
+
+// ******
+// header
+// ******
+.header-top-block {
+    background: linear-gradient(to right, #0091A6, #A2DAE2);
+}
+
+.header-top-block .city-selection {
+    color: #fff;
+    font-size: 14px;
+    padding-left: 0;
+}
+
+.header-top-block .phone {
+    color: $primary;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.header-top-block .nav .nav-link {
+    color: #fff;
+    font-size: 14px;
+}
+
+.header-top-block .nav.extra-menu .nav-link {
+    color: $primary;
+}
+
+.header-main-block .btn-menu {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 18px 42px;
+}
+
+.header-main-block .search-block .form-control {
+    background-color: #fff;
+    border: 1px solid #67C0CD;
+}
+
+.header-main-block .icon-menu-block .icon-menu-item {
+    padding: 0 15px;
+}
+
+// *********
+// main page
+// *********
+.top-banner .search-block {
+    background: linear-gradient(to right, #0091A6, #A2DAE2);
+    padding: 15px 10px;
+}
+
+.top-banner .search-block .form-control {
+    background-color: #fff;
+    border: 1px solid #67C0CD;
+}
+
+.age-and-banners .age-block {
+    background-color: #FFF3E8;
+}
+
+.age-and-banners .age-block .age-item {
+    text-align: center;
+    text-decoration: none;
+}
+
+.age-and-banners .age-block .age-item:hover {
+    color: $link-color;
+}
+
+.age-and-banners .age-block .age-item .age-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.age-and-banners .age-block .age-item .age-title {
+    font-size: 16px;
 }
 
 // sliders css

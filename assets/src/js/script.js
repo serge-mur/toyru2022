@@ -12,6 +12,31 @@ document.addEventListener("DOMContentLoaded", function(event) {
         },
     });
 
+    /*
+        const swiperAge = new Swiper(".swiper-age", {
+            slidesPerView: 2.5,
+            slidesPerGroup: 1,
+            spaceBetween: 20,
+            freeMode: true,
+            autoHeight: true,
+            grabCursor: true,
+            navigation: {
+                nextEl: '.swiper-reviews-nav .swiper-outside-button-next',
+                prevEl: '.swiper-reviews-nav .swiper-outside-button-prev',
+            },
+            breakpoints: {
+                576: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 3,
+                },
+                992: {
+                    slidesPerView: 4,
+                    slidesPerGroup: 4,
+                },
+            }
+        });
+    */
+
     const swiperCategories = new Swiper(".swiper-categories", {
         loop: true,
         grabCursor: true,

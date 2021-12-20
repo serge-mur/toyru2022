@@ -12,29 +12,33 @@
         <main class="main">
 
             <section class="top-banner">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="swiper swiper-main">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><img class="img-fluid" src="img/main_banner.png" alt=""></div>
-                                    <div class="swiper-slide"><img class="img-fluid" src="img/main_banner.png" alt=""></div>
-                                    <div class="swiper-slide"><img class="img-fluid" src="img/main_banner.png" alt=""></div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
-                            </div>
+                <div class="swiper swiper-main">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img class="img-fluid d-none d-sm-block" src="img/main_banner.png" alt="">
+                            <img class="img-fluid d-sm-none" src="img/main_banner_mob.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="img-fluid d-none d-sm-block" src="img/main_banner.png" alt="">
+                            <img class="img-fluid d-sm-none" src="img/main_banner_mob.png" alt="">
                         </div>
                     </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
+
+                <div class="search-block d-sm-none">
+                    <input class="form-control" type="search" placeholder="Поиск" aria-label="Поиск">
+                </div>
+
             </section>
 
             <section class="age-and-banners">
                 <div class="container">
                     <div class="row">
-                        <div class="col-8">
-                            <div class="age-block d-flex">
+                        <div class="col-12 col-lg-7">
+                            <div class="age-block d-flex justify-content-lg-around">
                                 <a href="#" class="age-item">
                                     <div class="age-icon"><img src="img/icons/age_0_1.svg" alt=""></div>
                                     <div class="age-title">0-1 года</div>
@@ -61,14 +65,14 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-lg-5">
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-12 col-sm-6">
                                     <a href="#">
                                         <img class="img-fluid" src="img/activate_card.png" alt="">
                                     </a>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-12 col-sm-6">
                                     <a href="#">
                                         <img class="img-fluid" src="img/pickup_gift.png" alt="">
                                     </a>

@@ -2,8 +2,8 @@
     <div class="header-top-block">
         <div class="container">
             <div class="row">
-                <div class="col-12 d-flex justify-content-between">
-                    <button class="btn btn-link city-selection" href="#">Москва</button>
+                <div class="col-12 d-flex justify-content-between align-items-center">
+                    <a href="#" class="nav-link city-selection"><img src="../img/icons/location.svg" alt="">&nbsp;<span>Москва</span></a>
                     <nav class="nav d-none d-lg-flex">
                         <a class="nav-link" href="#">О компании</a>
                         <a class="nav-link" href="#">Обратная связь</a>
@@ -12,44 +12,47 @@
                         <a class="nav-link" href="#">Франшиза</a>
                         <a class="nav-link" href="#">Магазины</a>
                     </nav>
-                    <a class="nav-link" href="#">8 800 700 34 70</a>
-                    <nav class="nav d-none d-lg-flex">
-                        <a class="nav-link" href="#">Чат</a>
-                        <a class="nav-link" href="#">Где мой заказ</a>
+                    <a class="nav-link phone" href="#">8 800 700 34 70</a>
+                    <nav class="nav extra-menu d-none d-lg-flex">
+                        <a class="nav-link" href="#"><img src="../img/icons/chat.svg" alt=""> Чат</a>
+                        <a class="nav-link" href="#"><img src="../img/icons/order.svg" alt=""> Где мой заказ</a>
                     </nav>
+                    <div class="d-lg-none">
+                        <a class="nav-link" href="#">Еще</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="header-main-block">
         <div class="container">
-            <div class="row justify-content-between">
+            <div class="row justify-content-between align-items-center">
                 <div class="col-auto">
                     <a href="/">
                         <img class="img-fluid d-none d-lg-inline" src="../img/logo.svg" alt="">
                         <img class="img-fluid d-lg-none" src="../img/logo_mob.svg" alt="">
                     </a>
                 </div>
-                <div class="col-auto">
-                    <button class="btn"><img src="../img/icons/menu.svg" alt=""> Меню</button>
+                <div class="col-auto d-none d-lg-block">
+                    <button class="btn btn-gradient btn-menu"><img src="../img/icons/menu.svg" alt=""> Меню</button>
                 </div>
-                <div class="col-lg">
+                <div class="col-lg d-none d-lg-block">
                     <div class="search-block">
-                        <input class="form-control" type="search" placeholder="Поиск" aria-label="Поиск">
+                        <input class="form-control" type="search" placeholder="Поиск по каталогу" aria-label="Поиск по каталогу">
                     </div>
                 </div>
                 <div class="col-auto">
-                    <div class="icon-menu-block d-flex">
-                        <a href="#">
+                    <div class="icon-menu-block d-flex align-items-center">
+                        <a href="#" class="icon-menu-item">
                             <img src="../img/icons/profile.svg" alt="">
                         </a>
-                        <a class="d-none d-lg-inline" href="#">
+                        <a href="#" class="icon-menu-item">
                             <img src="../img/icons/filter.svg" alt="">
                         </a>
-                        <a class="d-none d-lg-inline" href="#">
+                        <a href="#" class="icon-menu-item">
                             <img src="../img/icons/heart.svg" alt="">
                         </a>
-                        <a href="#">
+                        <a href="#" class="btn btn-gradient d-none d-lg-block btn-cart">
                             <img src="../img/icons/cart.svg" alt=""> <span>2</span>
                         </a>
                     </div>
