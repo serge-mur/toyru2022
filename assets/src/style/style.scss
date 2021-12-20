@@ -1,16 +1,16 @@
 // Default variable overrides
 // scss-docs-start theme-color-variables
-$primary: #ED4F00;
-$secondary: #FFF6EF;
+$primary: #247783;
+$secondary: rgba(233, 83, 34, 0.1);
 // Body
 //
 // Settings for the `<body>` element.
-$body-bg: #ffffff;
+$body-bg: #e5e5e5;
 $body-color: #333333;
 // Links
 //
 // Style anchor elements.
-$link-color: $primary;
+$link-color: #E95322;
 $link-decoration: underline dotted;
 $link-hover-color: $primary;
 $link-hover-decoration: none;
@@ -19,7 +19,7 @@ $border-radius: 20px;
 // Typography
 //
 // Font, line-height, and color for body text, headings, and more.
-$font-family-base: 'Nunito',
+$font-family-base: 'Gilroy',
 sans-serif;
 // Buttons
 //
@@ -36,7 +36,8 @@ $nav-pills-border-radius: 100px;
 $nav-pills-link-active-color: $primary;
 $nav-pills-link-active-bg: $secondary;
 // scss-docs-end nav-variables
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+@import './assets/src/style/font.scss';
 @import './node_modules/bootstrap/scss/bootstrap.scss';
 @import './node_modules/swiper/swiper.scss';
 // @import './node_modules/swiper/modules/navigation/navigation.scss';
@@ -45,6 +46,12 @@ $nav-pills-link-active-bg: $secondary;
 @import './node_modules/swiper/modules/grid/grid.scss';
 // css
 // base
+.page-wrapper {
+    max-width: 1920px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
 a {
     text-decoration-thickness: .125em;
     text-underline-offset: 3px;
@@ -56,9 +63,9 @@ a {
 .swiper-main .swiper-button-next {
     position: absolute;
     display: block;
-    top: calc(50% - 68px/2);
+    top: calc(50% - 32px/2);
     width: 32px;
-    height: 68px;
+    height: 32px;
     z-index: 10;
     cursor: pointer;
     &.swiper-button-disabled {
@@ -69,34 +76,32 @@ a {
 }
 
 .swiper-main .swiper-button-prev {
-    background-image: url(../img/slider_left.svg);
+    background-image: url(../img/icons/main_slider_left.svg);
     left: 0;
 }
 
 .swiper-main .swiper-button-next {
-    background-image: url(../img/slider_right.svg);
+    background-image: url(../img/icons/main_slider_right.svg);
     right: 0;
 }
 
 // swiper-swiper-action
-.swiper-outside-button-prev,
-.swiper-outside-button-next {
-    display: inline-block;
-    width: 48px;
-    height: 48px;
-    z-index: 10;
-    cursor: pointer;
-    &.swiper-button-disabled {
-        opacity: 0.35;
-        cursor: auto;
-        pointer-events: none;
-    }
-}
-
-.swiper-outside-button-prev {
-    background-image: url(../img/slider_left_v2.svg);
-}
-
-.swiper-outside-button-next {
-    background-image: url(../img/slider_right_v2.svg);
-}
+// .swiper-outside-button-prev,
+// .swiper-outside-button-next {
+//     display: inline-block;
+//     width: 48px;
+//     height: 48px;
+//     z-index: 10;
+//     cursor: pointer;
+//     &.swiper-button-disabled {
+//         opacity: 0.35;
+//         cursor: auto;
+//         pointer-events: none;
+//     }
+// }
+// .swiper-outside-button-prev {
+//     background-image: url(../img/slider_left_v2.svg);
+// }
+// .swiper-outside-button-next {
+//     background-image: url(../img/slider_right_v2.svg);
+// }

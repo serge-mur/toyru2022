@@ -12,16 +12,53 @@ document.addEventListener("DOMContentLoaded", function(event) {
         },
     });
 
-    const swiperAction = new Swiper(".swiper-action", {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
+    const swiperCategories = new Swiper(".swiper-categories", {
+        loop: true,
+        grabCursor: true,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 4,
+                slidesPerGroup: 4,
+            }
+        }
+    });
+
+    const swiperCard = new Swiper(".swiper-card", {
+        slidesPerView: 1,
         spaceBetween: 20,
-        freeMode: true,
         autoHeight: true,
         grabCursor: true,
         navigation: {
-            nextEl: '.swiper-action-nav .swiper-outside-button-next',
-            prevEl: '.swiper-action-nav .swiper-outside-button-prev',
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 4,
+                slidesPerGroup: 4,
+            },
+            992: {
+                slidesPerView: 4,
+                slidesPerGroup: 4,
+            },
+        }
+    });
+
+    const swiperAction = new Swiper(".swiper-action", {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 20,
+        autoHeight: true,
+        grabCursor: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
         breakpoints: {
             576: {
@@ -29,8 +66,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 slidesPerGroup: 3,
             },
             992: {
-                slidesPerView: 4,
-                slidesPerGroup: 4,
+                slidesPerView: 3,
+                slidesPerGroup: 3,
             },
         }
     });
@@ -45,29 +82,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         navigation: {
             nextEl: '.swiper-characters-nav .swiper-outside-button-next',
             prevEl: '.swiper-characters-nav .swiper-outside-button-prev',
-        },
-        breakpoints: {
-            576: {
-                slidesPerView: 4,
-                slidesPerGroup: 4,
-            },
-            992: {
-                slidesPerView: 5,
-                slidesPerGroup: 5,
-            },
-        }
-    });
-
-    const swiperCard = new Swiper(".swiper-card", {
-        slidesPerView: 2.5,
-        // slidesPerGroup: 2,
-        spaceBetween: 20,
-        freeMode: true,
-        autoHeight: true,
-        grabCursor: true,
-        navigation: {
-            nextEl: '.swiper-card1-nav .swiper-outside-button-next',
-            prevEl: '.swiper-card1-nav .swiper-outside-button-prev',
         },
         breakpoints: {
             576: {
