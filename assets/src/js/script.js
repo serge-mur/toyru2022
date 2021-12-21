@@ -12,36 +12,36 @@ document.addEventListener("DOMContentLoaded", function(event) {
         },
     });
 
-    /*
-        const swiperAge = new Swiper(".swiper-age", {
-            slidesPerView: 2.5,
-            slidesPerGroup: 1,
-            spaceBetween: 20,
-            freeMode: true,
-            autoHeight: true,
-            grabCursor: true,
-            navigation: {
-                nextEl: '.swiper-reviews-nav .swiper-outside-button-next',
-                prevEl: '.swiper-reviews-nav .swiper-outside-button-prev',
+    /**/
+    const swiperAge = new Swiper(".swiper-age", {
+        slidesPerView: 2.5,
+        slidesPerGroup: 1,
+        spaceBetween: 5,
+        freeMode: true,
+        autoHeight: true,
+        grabCursor: true,
+        // navigation: {
+        //     nextEl: '.swiper-reviews-nav .swiper-outside-button-next',
+        //     prevEl: '.swiper-reviews-nav .swiper-outside-button-prev',
+        // },
+        breakpoints: {
+            576: {
+                slidesPerView: 6,
+                slidesPerGroup: 6,
             },
-            breakpoints: {
-                576: {
-                    slidesPerView: 3,
-                    slidesPerGroup: 3,
-                },
-                992: {
-                    slidesPerView: 4,
-                    slidesPerGroup: 4,
-                },
-            }
-        });
-    */
+            992: {
+                slidesPerView: 6,
+                slidesPerGroup: 6,
+            },
+        }
+    });
 
     const swiperCategories = new Swiper(".swiper-categories", {
         loop: true,
         grabCursor: true,
         slidesPerView: 1,
         slidesPerGroup: 1,
+        spaceBetween: 20,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -51,6 +51,33 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 slidesPerView: 4,
                 slidesPerGroup: 4,
             }
+        }
+    });
+
+    const swiperPills = new Swiper(".swiper-pills", {
+        slidesPerView: 1.5,
+        // slidesPerGroup: 2,
+        // slidesPerView: "auto",
+        spaceBetween: 20,
+        // freeMode: true,
+        autoHeight: true,
+        grabCursor: true,
+        navigation: {
+            nextEl: '.swipper-pills-nav .swiper-button-next',
+            prevEl: '.swipper-pills-nav .swiper-button-prev',
+        },
+        breakpoints: {
+            576: {
+                // slidesPerView: 3,
+                // slidesPerGroup: 3,
+                // slidesPerView: "auto"
+            },
+            992: {
+                slidesPerView: 3.5,
+                slidesPerGroup: 3
+                    // slidesPerView: "auto",
+                    // slidesPerGroupAuto: true
+            },
         }
     });
 
@@ -121,10 +148,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 
     const swiperReviews = new Swiper(".swiper-reviews", {
-        slidesPerView: 2.5,
-        slidesPerGroup: 2,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
         spaceBetween: 20,
-        freeMode: true,
+        // freeMode: true,
         autoHeight: true,
         grabCursor: true,
         navigation: {
@@ -137,21 +164,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 slidesPerGroup: 3,
             },
             992: {
-                slidesPerView: 4,
-                slidesPerGroup: 4,
+                slidesPerView: 3,
+                slidesPerGroup: 3,
             },
         }
     });
 
     const swiperBrands = new Swiper(".swiper-brands", {
-        slidesPerView: 2.5,
-        slidesPerGroup: 1,
+        slidesPerView: 2,
+        slidesPerGroup: 2,
         spaceBetween: 20,
-        freeMode: true,
+        // freeMode: true,
         grabCursor: true,
         grid: {
             fill: 'row',
-            rows: 3,
+            rows: 2,
         },
         navigation: {
             nextEl: '.swiper-brands-nav .swiper-outside-button-next',
