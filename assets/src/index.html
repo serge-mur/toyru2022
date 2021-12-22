@@ -37,16 +37,16 @@
             <section class="age-and-banners">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-lg-7">
+                        <div class="col-12 col-lg-7 gx-0 gx-sm-4">
                             <div class="age-block swiper-age">
                                 <div class="swiper-wrapper">
                                     <a href="#" class="age-item swiper-slide">
                                         <div class="age-icon"><img src="img/icons/age_0_1.svg" alt=""></div>
-                                        <div class="age-title">0-1 года</div>
+                                        <div class="age-title">0-1 год</div>
                                     </a>
                                     <a href="#" class="age-item swiper-slide">
                                         <div class="age-icon"><img src="img/icons/age_1_3.svg" alt=""></div>
-                                        <div class="age-title">1-3 лет</div>
+                                        <div class="age-title">1-3 года</div>
                                     </a>
                                     <a href="#" class="age-item swiper-slide">
                                         <div class="age-icon"><img src="img/icons/age_4_5.svg" alt=""></div>
@@ -88,7 +88,7 @@
 
             <section class="popular-categories">
                 <div class="container">
-                    <div class="row">
+                    <div class="row align-items-lg-center">
                         <div class="col-12 col-lg order-0">
                             <h2 class="section-name">Популярные категории товаров</h2>
                         </div>
@@ -98,6 +98,10 @@
                         <div class="col-12 order-1 order-lg-2">
                             <div class="swiper swiper-categories">
                                 <div class="swiper-wrapper">
+                                    <a href="#" class="swiper-slide">
+                                        <img class="img-fluid" src="img/categories/cat_05.png" alt="">
+                                        <div>Star wars</div>
+                                    </a>
                                     <a href="#" class="swiper-slide">
                                         <img class="img-fluid" src="img/categories/cat_01.png" alt="">
                                         <div>Star wars</div>
@@ -142,7 +146,7 @@
 
             <section class="trends">
                 <div class="container">
-                    <div class="row">
+                    <div class="row justify-content-between align-items-center trend-nav">
                         <div class="col-12 col-lg-3">
                             <h2 class="section-name">Тренды</h2>
                         </div>
@@ -160,7 +164,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-auto d-none d-lg-block">
+                        <div class="col-auto d-none d-lg-flex">
                             <div class="swipper-pills-nav">
                                 <div class="swiper-button-prev"></div>
                                 <div class="swiper-button-next"></div>
@@ -172,7 +176,7 @@
                             <div class="tab-pane fade show active" id="trends-1" role="tabpanel" aria-labelledby="trends-1-tab">
                                 <div class="row">
                                     <div class="col-12 col-lg-6 gx-0 gx-sm-4">
-                                        <div class="category-banner d-flex">
+                                        <div class="category-banner banner1">
                                             <div class="category-banner-img">
                                                 <img src="img/category_img.png" alt="">
                                             </div>
@@ -197,10 +201,36 @@
                                     </div>
 
                                 </div>
-
-
                             </div>
-                            <div class="tab-pane fade" id="trends-2" role="tabpanel" aria-labelledby="trends-2-tab">2</div>
+                            <div class="tab-pane fade" id="trends-2" role="tabpanel" aria-labelledby="trends-2-tab">
+                                <div class="row">
+                                    <div class="col-12 col-lg-6 gx-0 gx-sm-4">
+                                        <div class="category-banner banner2">
+                                            <div class="category-banner-img">
+                                                <img src="img/category_img2.png" alt="">
+                                            </div>
+                                            <div class="category-banner-content">
+                                                <img class="content-logo" src="img/category_logo2.png" alt="">
+                                                <div class="content-text">
+                                                    Конструктор сохраняет свою популярность уже порядка 80 лет. Сложно найти ребенка, который откажется от этой увлекательной игры.
+                                                </div>
+                                                <a href="#" class="btn btn-gradient">Перейти в каталог <img src="img/icons/arrow_link_white.svg" alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="row">
+                                            <div class="col-12 col-lg-6">
+                                                @@include('./template/card_preview.html')
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                @@include('./template/card_preview.html')
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
                             <div class="tab-pane fade" id="trends-3" role="tabpanel" aria-labelledby="trends-3-tab">3</div>
                         </div>
                     </div>
@@ -245,6 +275,8 @@
                                         @@include('./template/card_preview.html')
                                     </div>
                                 </div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
                             </div>
                         </div>
                     </div>
@@ -291,57 +323,67 @@
             <section class="popular-characters">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 d-flex justify-content-between">
+                        <div class="col-12">
                             <h2 class="section-name">Популярные персонажи</h2>
-                            <div class="swiper-characters-nav">
-                                <div class="swiper-outside-button-prev"></div>
-                                <div class="swiper-outside-button-next"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper swiper-characters">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="character-item">
+                                <div class="character-img"><img class="img-fluid" src="img/characters/character_01.png" alt=""></div>
+                                <div class="character-name">Холодное Сердце</div>
+                                <div class="character-description">Легендарный супергерой комиксов издательства Marvel Comics. Дети обожают этого героя за его храбрость, силу и проворство</div>
                             </div>
                         </div>
-                        <div class="col-12">
-                            <div class="swiper swiper-characters">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="character-item">
-                                            <img class="img-fluid" src="img/characters/character_01.png" alt="">
-                                            <div class="character-name">Холодное Сердце</div>
-                                            <div class="character-description d-none">Легендарный супергерой комиксов издательства Marvel Comics. Дети обожают этого героя за его храбрость, силу и проворство</div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="character-item">
-                                            <img class="img-fluid" src="img/characters/character_02.png" alt="">
-                                            <div class="character-name">Черепашки Ниндзя</div>
-                                            <div class="character-description d-none">Легендарный супергерой комиксов издательства Marvel Comics. Дети обожают этого героя за его храбрость, силу и проворство</div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="character-item">
-                                            <img class="img-fluid" src="img/characters/character_03.png" alt="">
-                                            <div class="character-name">Barbie</div>
-                                            <div class="character-description d-none">Легендарный супергерой комиксов издательства Marvel Comics. Дети обожают этого героя за его храбрость, силу и проворство</div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="character-item">
-                                            <img class="img-fluid" src="img/characters/character_04.png" alt="">
-                                            <div class="character-name">L.O.L</div>
-                                            <div class="character-description d-none">Легендарный супергерой комиксов издательства Marvel Comics. Дети обожают этого героя за его храбрость, силу и проворство</div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="character-item">
-                                            <img class="img-fluid" src="img/characters/character_05.png" alt="">
-                                            <div class="character-name">Собачий Патруль</div>
-                                            <div class="character-description d-none">Легендарный супергерой комиксов издательства Marvel Comics. Дети обожают этого героя за его храбрость, силу и проворство</div>
-                                        </div>
-                                    </div>
+                        <div class="swiper-slide">
+                            <div class="character-item">
+                                <div class="character-img"><img class="img-fluid" src="img/characters/character_02.png" alt=""></div>
+                                <div class="character-name">Черепашки Ниндзя</div>
+                                <div class="character-description">Легендарный супергерой комиксов издательства Marvel Comics. Дети обожают этого героя за его храбрость, силу и проворство</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="character-item">
+                                <div class="character-img"><img class="img-fluid" src="img/characters/character_03.png" alt=""></div>
+                                <div class="character-name">Barbie</div>
+                                <div class="character-description">Легендарный супергерой комиксов издательства Marvel Comics. Дети обожают этого героя за его храбрость, силу и проворство</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="character-item">
+                                <div class="character-img"><img class="img-fluid" src="img/characters/character_04.png" alt=""></div>
+                                <div class="character-name">L.O.L</div>
+                                <div class="character-description">Легендарный супергерой комиксов издательства Marvel Comics. Дети обожают этого героя за его храбрость, силу и проворство</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="character-item">
+                                <div class="character-img"><img class="img-fluid" src="img/characters/character_05.png" alt=""></div>
+                                <div class="character-name">Собачий Патруль</div>
+                                <div class="character-description">Легендарный супергерой комиксов издательства Marvel Comics. Дети обожают этого героя за его храбрость, силу и проворство</div>
+                            </div>
+                        </div>
 
-                                </div>
-                                <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="characters-nav">
+                    <div class="container">
+                        <div class="row">
+                            <div class="сщд-12 col-lg-4">
+                                <div class="characters-name"></div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="characters-description"></div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <a href="#" class="btn btn-more">Все персонажи</a>
                             </div>
                         </div>
                     </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </section>
 

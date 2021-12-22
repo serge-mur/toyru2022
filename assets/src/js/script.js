@@ -7,12 +7,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
             el: '.swiper-pagination',
         },
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-main .swiper-button-next',
+            prevEl: '.swiper-main .swiper-button-prev',
         },
     });
 
-    /**/
     const swiperAge = new Swiper(".swiper-age", {
         slidesPerView: 2.5,
         slidesPerGroup: 1,
@@ -20,10 +19,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         freeMode: true,
         autoHeight: true,
         grabCursor: true,
-        // navigation: {
-        //     nextEl: '.swiper-reviews-nav .swiper-outside-button-next',
-        //     prevEl: '.swiper-reviews-nav .swiper-outside-button-prev',
-        // },
         breakpoints: {
             576: {
                 slidesPerView: 6,
@@ -43,8 +38,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         slidesPerGroup: 1,
         spaceBetween: 20,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-categories .swiper-button-next',
+            prevEl: '.swiper-categories .swiper-button-prev',
         },
         breakpoints: {
             576: {
@@ -56,10 +51,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     const swiperPills = new Swiper(".swiper-pills", {
         slidesPerView: 1.5,
-        // slidesPerGroup: 2,
-        // slidesPerView: "auto",
         spaceBetween: 20,
-        // freeMode: true,
+        freeMode: true,
         autoHeight: true,
         grabCursor: true,
         navigation: {
@@ -68,15 +61,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
         },
         breakpoints: {
             576: {
-                // slidesPerView: 3,
-                // slidesPerGroup: 3,
-                // slidesPerView: "auto"
+                slidesPerView: 2.5,
+                slidesPerGroup: 3
             },
             992: {
                 slidesPerView: 3.5,
                 slidesPerGroup: 3
-                    // slidesPerView: "auto",
-                    // slidesPerGroupAuto: true
             },
         }
     });
@@ -87,15 +77,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
         autoHeight: true,
         grabCursor: true,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-card .swiper-button-next',
+            prevEl: '.swiper-card .swiper-button-prev',
         },
         breakpoints: {
             576: {
-                slidesPerView: 4,
-                slidesPerGroup: 4,
+                slidesPerView: 2,
+                slidesPerGroup: 2,
             },
             992: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+            },
+            1200: {
                 slidesPerView: 4,
                 slidesPerGroup: 4,
             },
@@ -109,8 +103,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         autoHeight: true,
         grabCursor: true,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-action .swiper-button-next',
+            prevEl: '.swiper-action .swiper-button-prev',
         },
         breakpoints: {
             576: {
@@ -125,27 +119,41 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 
     const swiperCharacters = new Swiper(".swiper-characters", {
-        slidesPerView: 2.5,
-        // slidesPerGroup: 2,
+        loop: true,
+        slidesPerView: 2,
+        centeredSlides: true,
         spaceBetween: 20,
-        freeMode: true,
         autoHeight: true,
         grabCursor: true,
         navigation: {
-            nextEl: '.swiper-characters-nav .swiper-outside-button-next',
-            prevEl: '.swiper-characters-nav .swiper-outside-button-prev',
+            nextEl: '.characters-nav .swiper-button-next',
+            prevEl: '.characters-nav .swiper-button-prev',
         },
         breakpoints: {
             576: {
-                slidesPerView: 4,
-                slidesPerGroup: 4,
-            },
-            992: {
                 slidesPerView: 5,
-                slidesPerGroup: 5,
+                // slidesPerGroup: 5,
             },
+            // 992: {
+            //     slidesPerView: 5,
+            //     slidesPerGroup: 5,
+            // },
         }
     });
+
+    swiperCharacters.slideTo(2, false, false);
+    getCharacter();
+    swiperCharacters.on('slideChange', function() {
+        getCharacter();
+    });
+
+    function getCharacter() {
+        let el = swiperCharacters.slides[swiperCharacters.activeIndex];
+        let name = el.querySelector('.character-name').innerHTML;
+        let description = el.querySelector('.character-description').innerHTML;
+        document.querySelector('.characters-nav .characters-name').innerHTML = name;
+        document.querySelector('.characters-nav .characters-description').innerHTML = description;
+    }
 
     const swiperReviews = new Swiper(".swiper-reviews", {
         slidesPerView: 1,
