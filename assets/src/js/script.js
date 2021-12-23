@@ -109,11 +109,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
         breakpoints: {
             576: {
                 slidesPerView: 3,
-                slidesPerGroup: 3,
+                slidesPerGroup: 1,
             },
             992: {
                 slidesPerView: 3,
-                slidesPerGroup: 3,
+                slidesPerGroup: 1,
             },
         }
     });
@@ -122,8 +122,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         loop: true,
         slidesPerView: 2,
         centeredSlides: true,
-        spaceBetween: 20,
-        autoHeight: true,
+        spaceBetween: 50,
+        // autoHeight: true,
         grabCursor: true,
         navigation: {
             nextEl: '.characters-nav .swiper-button-next',
@@ -133,6 +133,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             576: {
                 slidesPerView: 5,
                 // slidesPerGroup: 5,
+
             },
             // 992: {
             //     slidesPerView: 5,
@@ -213,3 +214,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 
 });
+
+const mediaQueryMobile = window.matchMedia('(max-width: 576px)')
+
+function mediaChange(e) {
+    if (e.matches) {
+        console.log('mobile!')
+
+        document.querySelectorAll('.footer-menu-title').forEach(function(el) {
+            el.disabled = false
+            el.parentNode.querySelector('.collapse').classList.remove('show')
+        });
+
+    } else {
+        console.log('desktop!')
+
+        document.querySelectorAll('.footer-menu-title').forEach(function(el) {
+            el.disabled = true
+            el.parentNode.querySelector('.collapse').classList.add('show')
+        });
+    }
+}
+mediaQueryMobile.addListener(mediaChange)
+mediaChange(mediaQueryMobile)
