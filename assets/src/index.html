@@ -150,7 +150,7 @@
                         <div class="col-12 col-lg-3">
                             <h2 class="section-name">Тренды</h2>
                         </div>
-                        <div class="col-12 col-lg-7">
+                        <div class="col-12 col-lg-7 gx-0 gx-sm-4">
                             <div class="swiper swiper-pills">
                                 <div class="nav nav-pills flex-nowrap swiper-wrapper" id="trends-tab" role="tablist">
                                     <button class="nav-link active swiper-slide" id="trends-1-tab" data-bs-toggle="pill" data-bs-target="#trends-1" type="button" role="tab" aria-controls="trends-1" aria-selected="true">Конструкторы LEGO</button>
@@ -185,7 +185,10 @@
                                                 <div class="content-text">
                                                     Конструктор сохраняет свою популярность уже порядка 80 лет. Сложно найти ребенка, который откажется от этой увлекательной игры.
                                                 </div>
-                                                <a href="#" class="btn btn-gradient">Перейти в каталог <img src="img/icons/arrow_link_white.svg" alt=""></a>
+                                                <a href="#" class="btn btn-gradient">
+                                                    <span class="d-lg-none">В каталог</span><span class="d-none d-lg-inline">Перейти в каталог</span>
+                                                    <img src="img/icons/arrow_link_white.svg" alt="">
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -214,7 +217,10 @@
                                                 <div class="content-text">
                                                     Конструктор сохраняет свою популярность уже порядка 80 лет. Сложно найти ребенка, который откажется от этой увлекательной игры.
                                                 </div>
-                                                <a href="#" class="btn btn-gradient">Перейти в каталог <img src="img/icons/arrow_link_white.svg" alt=""></a>
+                                                <a href="#" class="btn btn-gradient">
+                                                    <span class="d-lg-none">В каталог</span><span class="d-none d-lg-inline">Перейти в каталог</span>
+                                                    <img src="img/icons/arrow_link_white.svg" alt="">
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -246,7 +252,7 @@
 
             <section class="discounts">
                 <div class="container">
-                    <div class="row">
+                    <div class="row align-items-center">
                         <div class="col-12 col-lg order-0">
                             <h2 class="section-name">Скидки</h2>
                         </div>
@@ -285,7 +291,7 @@
 
             <section class="action">
                 <div class="container">
-                    <div class="row">
+                    <div class="row align-items-center">
                         <div class="col-12 col-lg order-0">
                             <h2 class="section-name">Акции</h2>
                         </div>
@@ -308,6 +314,8 @@
                                         <img class="img-fluid" src="img/action/action_04.png" alt="">
                                     </a>
                                 </div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
                             </div>
                         </div>
                     </div>
@@ -426,6 +434,8 @@
                                         @@include('./template/card_preview.html')
                                     </div>
                                 </div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
                             </div>
                         </div>
                     </div>
@@ -437,13 +447,17 @@
                     <div class="row justify-content-center">
                         <div class="col-12 col-lg-5">
                             <div class="slogan-img">
-                                <img class="" src="img/about_slogan.png" alt="">
+                                <img src="img/about_slogan.png" alt="">
                             </div>
                         </div>
                         <div class="col-12 col-lg-5">
-                            <p>Федеральная розничная сеть магазинов детских игрушек, которая насчитывает 166 магазинов по России, от Москвы до Владивостока. Один из крупнейших интернет-магазинов игрушек в России, который второй год подряд является победителем
-                                ежегодной премии Retailer of the Year Russia в номинациях: «Лучший сетевой магазин года России» и «Лучший интернет-магазин года России. Webshop Awards Russia» категории «Дети».</p>
-                            <a href="#" class="btn btn-more">Подробнее о компании</a>
+                            <div class="content-block">
+                                <p>Федеральная розничная сеть магазинов детских игрушек, которая насчитывает 166 магазинов по России, от Москвы до Владивостока. Один из крупнейших интернет-магазинов игрушек в России, который второй год подряд является победителем
+                                    ежегодной премии Retailer of the Year Russia в номинациях: «Лучший сетевой магазин года России» и «Лучший интернет-магазин года России. Webshop Awards Russia» категории «Дети».</p>
+                                <a href="#" class="btn btn-more">
+                                    <span class="d-lg-none">О компании</span><span class="d-none d-lg-inline">Подробнее о компании</span>
+                                </a>
+                            </div>
                         </div>
                         <div class="col-12 col-lg-10">
                             <div class="about-video">
@@ -523,7 +537,7 @@
 
             <section class="matched-for-you">
                 <div class="container">
-                    <div class="row">
+                    <div class="row align-items-center">
                         <div class="col-12 col-lg order-0">
                             <h2 class="section-name">Подобрано для вас</h2>
                         </div>
@@ -552,6 +566,8 @@
                                         @@include('./template/card_preview.html')
                                     </div>
                                 </div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
                             </div>
                         </div>
                     </div>
@@ -560,15 +576,14 @@
 
             <section class="reviews">
                 <div class="container">
-                    <div class="row">
-
+                    <div class="row align-items-center">
                         <div class="col-12 col-lg order-0">
                             <h2 class="section-name">Обзоры и видео</h2>
                         </div>
                         <div class="col-12 col-lg-auto order-2 order-lg-1">
                             <a href="#" class="btn btn-more">Все обзоры и видео</a>
                         </div>
-                        <div class="col-12 order-1 order-lg-2 gx-0 gx-sm-4">
+                        <div class="col-12 order-1 order-lg-2">
                             <div class="swiper swiper-reviews">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
@@ -591,6 +606,8 @@
                                     </div>
 
                                 </div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
                                 <div class="swiper-pagination"></div>
                             </div>
                         </div>
@@ -600,7 +617,7 @@
 
             <section class="brands">
                 <div class="container">
-                    <div class="row">
+                    <div class="row align-items-center">
                         <div class="col-12 col-lg order-0">
                             <h2 class="section-name">Бренды</h2>
                         </div>

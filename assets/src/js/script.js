@@ -9,14 +9,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
         navigation: {
             nextEl: '.swiper-main .swiper-button-next',
             prevEl: '.swiper-main .swiper-button-prev',
-        },
+        }
     });
 
     const swiperAge = new Swiper(".swiper-age", {
         slidesPerView: 2.5,
         slidesPerGroup: 1,
         spaceBetween: 5,
-        freeMode: true,
+        // freeMode: true,
         autoHeight: true,
         grabCursor: true,
         breakpoints: {
