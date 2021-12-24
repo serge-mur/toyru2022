@@ -145,15 +145,26 @@ a {
             background-color: #247783;
         }
     }
-    .img-block {}
+    .img-block {
+        display: block;
+        text-align: center;
+        // width: 305px;
+        // height: 305px;
+        margin-bottom: 30px;
+    }
     .middle-block {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
         .name {
             @include reset-link();
             font-size: 16px;
             font-weight: 500;
             text-decoration: none;
+            height: 44px;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
         .rating {
             display: flex;
@@ -166,6 +177,7 @@ a {
     .bottom-block {
         display: flex;
         justify-content: space-between;
+        height: 48px;
         .price-block {
             display: flex;
             justify-content: space-between;
@@ -182,6 +194,9 @@ a {
                 opacity: .5;
                 white-space: nowrap;
             }
+        }
+        .btn {
+            width: 70px;
         }
     }
 }
@@ -251,7 +266,11 @@ a {
             }
         }
         .btn-cart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin-left: 15px;
+            width: 80px;
             height: 54px;
             img {
                 margin-right: 5px;

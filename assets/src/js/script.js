@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     const swiperCard = new Swiper(".swiper-card", {
         slidesPerView: 1,
         spaceBetween: 20,
-        autoHeight: true,
+        // autoHeight: true,
         grabCursor: true,
         navigation: {
             nextEl: '.swiper-card .swiper-button-next',
