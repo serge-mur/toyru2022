@@ -52,13 +52,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     const swiperPills = new Swiper(".swiper-pills", {
         slidesPerView: 1.5,
         spaceBetween: 20,
-        freeMode: true,
+        // freeMode: true,
         autoHeight: true,
         grabCursor: true,
-        navigation: {
-            nextEl: '.swipper-pills-nav .swiper-button-next',
-            prevEl: '.swipper-pills-nav .swiper-button-prev',
-        },
+        // navigation: {
+        //     nextEl: '.swipper-pills-nav .swiper-button-next',
+        //     prevEl: '.swipper-pills-nav .swiper-button-prev',
+        // },
+        watchSlidesProgress: true,
         breakpoints: {
             576: {
                 slidesPerView: 2.5,
@@ -70,6 +71,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
             },
         }
     });
+
+    const swiperTrends = new Swiper(".swiper-trends", {
+        slidesPerView: 1,
+        loop: true,
+        grabCursor: true,
+        spaceBetween: 15,
+        // pagination: {
+        //     el: '.swiper-pagination',
+        // },
+        navigation: {
+            nextEl: '.swipper-trends-nav .swiper-button-next',
+            prevEl: '.swipper-trends-nav .swiper-button-prev',
+        },
+        thumbs: {
+            swiper: swiperPills,
+        },
+    });
+
 
     const swiperCard = new Swiper(".swiper-card", {
         slidesPerView: 1,
@@ -132,6 +151,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         breakpoints: {
             576: {
                 slidesPerView: 5,
+                spaceBetween: 50,
                 // slidesPerGroup: 5,
 
             },

@@ -563,10 +563,21 @@ a {
     }
     .trends {
         margin: 0 0 60px 0;
-        .trend-nav {
+        .swiper-pills {
+            .swiper-slide-thumb-active {
+                border: 2px solid #e95322;
+                color: #e95322;
+                background-color: #fff;
+            }
+            .nav-link:first-child {
+                margin-left: 10px;
+            }
+        }
+        .trends-nav-block {
             margin-bottom: 20px;
         }
         .category-banner {
+            overflow: hidden;
             display: flex;
             .category-banner-img {
                 position: relative;
@@ -596,6 +607,9 @@ a {
                     font-size: 18px;
                 }
                 .btn {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     margin: 30px 0;
                     height: 50px;
                     width: 100%;
@@ -615,11 +629,17 @@ a {
                 background: linear-gradient(270deg, #FFC700 0%, #FFEB36 100%);
             }
             @include media-breakpoint-down(sm) {
-                margin-bottom: 60px;
+                margin-bottom: 30px;
             }
         }
         @include media-breakpoint-up(sm) {
             margin: 0 0 60px 0;
+        }
+        .card-preview {
+            margin: 0 15px 15px 15px;
+            @include media-breakpoint-up(sm) {
+                margin: 0;
+            }
         }
     }
     .full-page-banner {
@@ -641,6 +661,10 @@ a {
         }
     }
     .popular-characters {
+        margin-bottom: 30px;
+        @include media-breakpoint-up(sm) {
+            margin-bottom: 60px;
+        }
         background: url(../img/character_bg.png) center bottom no-repeat;
         .characters-nav {
             position: relative;
@@ -664,7 +688,7 @@ a {
             .swiper-button-next {
                 position: absolute;
                 display: block;
-                top: calc(50% - 48px/2);
+                top: calc(50% - 24px/2);
                 width: 48px;
                 height: 24px;
                 z-index: 10;
@@ -677,11 +701,17 @@ a {
             }
             .swiper-button-prev {
                 background-image: url(../img/icons/char_slider_left.svg);
-                left: 250px;
+                left: 150px;
             }
             .swiper-button-next {
                 background-image: url(../img/icons/char_slider_right.svg);
-                right: 250px;
+                right: 150px;
+            }
+            @include media-breakpoint-down(sm) {
+                .swiper-button-prev,
+                .swiper-button-next {
+                    display: none;
+                }
             }
         }
     }
@@ -873,7 +903,7 @@ a {
     }
 }
 
-.swipper-pills-nav {
+.swipper-trends-nav {
     .swiper-button-prev,
     .swiper-button-next {
         display: inline-block;
@@ -953,10 +983,16 @@ a {
                 .character-description {
                     display: none;
                 }
-            }
-            @include media-breakpoint-down(sm) {
-                .character-name {
-                    display: none;
+                @include media-breakpoint-down(sm) {
+                    .character-name {
+                        display: none;
+                    }
+                    .character-img {
+                        img {
+                            max-width: 150px;
+                            max-height: 230px;
+                        }
+                    }
                 }
             }
             &.swiper-slide-active {
