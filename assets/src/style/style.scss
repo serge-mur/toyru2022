@@ -316,6 +316,90 @@ a {
     }
 }
 
+#offcanvasMenu {
+    .offcanvas-body {
+        background-color: #e5e5e5;
+        .mobile-catalog-menu {
+            // background-color: #247783;
+            .accordion-item {
+                background-color: transparent;
+                border: none;
+                .accordion-button {
+                    background-color: transparent;
+                    box-shadow: none;
+                    font-weight: bold;
+                    padding-left: .75rem;
+                }
+                .accordion-collapse {}
+            }
+            margin-bottom: 30px;
+        }
+        .mobile-menu-bottom {
+            // background-color: #247783;
+            background-color: rgba(233, 83, 34, 0.1);
+            // background-color: #e5e5e5;
+            .nav-link {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.dropdown-desktop-menu {
+    background-color: transparent;
+    border: 1px solid transparent;
+    .desktop-menu-wrapper {
+        background-color: #fff;
+        padding: 30px;
+        // box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    }
+    .catalog-menu {
+        ul {
+            position: relative;
+            list-style: none;
+            li {
+                position: static;
+                a {
+                    @include reset-link();
+                    display: block;
+                    padding: .5rem 0;
+                    font-size: 18px;
+                    font-weight: 700;
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+                ul {
+                    position: absolute;
+                    top: 0;
+                    height: 100%;
+                    display: none;
+                    li {
+                        a {
+                            @include reset-link();
+                            padding: .5rem 0;
+                            font-size: 16px;
+                            font-weight: normal;
+                            &:hover {
+                                color: $primary;
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    ul {
+                        display: block;
+                        left: 300px;
+                        li {
+                            a {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 // ******
 // footer
 // ******
@@ -843,7 +927,6 @@ a {
 }
 
 // sliders css
-// swiper-main
 .swiper-main {
     .swiper-button-prev,
     .swiper-button-next {
@@ -941,38 +1024,6 @@ a {
     }
     .swiper-button-next {
         background-image: url(../img/icons/pills_slider_right.svg);
-    }
-}
-
-.swiper-action {
-    .swiper-button-prev,
-    .swiper-button-next {
-        position: absolute;
-        display: block;
-        top: calc(50% - 32px/2);
-        width: 8px;
-        height: 12px;
-        z-index: 10;
-        cursor: pointer;
-        &.swiper-button-disabled {
-            opacity: 0.35;
-            cursor: auto;
-            pointer-events: none;
-        }
-    }
-    .swiper-button-prev {
-        background-image: url(../img/icons/action_slider_left.svg);
-        left: 10px;
-    }
-    .swiper-button-next {
-        background-image: url(../img/icons/action_slider_right.svg);
-        right: 10px;
-    }
-    @include media-breakpoint-up(sm) {
-        .swiper-button-prev,
-        .swiper-button-next {
-            display: none;
-        }
     }
 }
 
