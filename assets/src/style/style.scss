@@ -876,8 +876,12 @@ a {
     }
 }
 
-.swiper-categories,
-.swiper-card {
+.swiper-categories-wrapper,
+.swiper-action-wrapper,
+.swiper-card-wrapper,
+.swiper-reviews-wrapper,
+.swiper-brands-wrapper {
+    position: relative;
     .swiper-button-prev,
     .swiper-button-next {
         position: absolute;
@@ -895,11 +899,26 @@ a {
     }
     .swiper-button-prev {
         background-image: url(../img/icons/card_slider_left.svg);
-        left: 0;
+        left: -60px;
+        @include media-breakpoint-down(sm) {
+            left: -15px;
+        }
     }
     .swiper-button-next {
         background-image: url(../img/icons/card_slider_right.svg);
-        right: 0;
+        right: -60px;
+        @include media-breakpoint-down(sm) {
+            right: -15px;
+        }
+    }
+}
+
+.swiper-reviews-wrapper {
+    .swiper-button-prev {
+        background-image: url(../img/icons/review_slider_left.svg);
+    }
+    .swiper-button-next {
+        background-image: url(../img/icons/review_slider_right.svg);
     }
 }
 

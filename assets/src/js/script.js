@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         slidesPerView: 2.5,
         slidesPerGroup: 1,
         spaceBetween: 5,
-        // freeMode: true,
+        freeMode: true,
         autoHeight: true,
         grabCursor: true,
         breakpoints: {
@@ -38,8 +38,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         slidesPerGroup: 1,
         spaceBetween: 20,
         navigation: {
-            nextEl: '.swiper-categories .swiper-button-next',
-            prevEl: '.swiper-categories .swiper-button-prev',
+            nextEl: '.swiper-categories-wrapper .swiper-button-next',
+            prevEl: '.swiper-categories-wrapper .swiper-button-prev',
         },
         breakpoints: {
             576: {
@@ -55,10 +55,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         // freeMode: true,
         autoHeight: true,
         grabCursor: true,
-        // navigation: {
-        //     nextEl: '.swipper-pills-nav .swiper-button-next',
-        //     prevEl: '.swipper-pills-nav .swiper-button-prev',
-        // },
         watchSlidesProgress: true,
         breakpoints: {
             576: {
@@ -89,15 +85,64 @@ document.addEventListener("DOMContentLoaded", function(event) {
         },
     });
 
-
-    const swiperCard = new Swiper(".swiper-card", {
+    const discountsSwiperCard = new Swiper(".discounts .swiper-card", {
         slidesPerView: 1,
         spaceBetween: 20,
         // autoHeight: true,
         grabCursor: true,
         navigation: {
-            nextEl: '.swiper-card .swiper-button-next',
-            prevEl: '.swiper-card .swiper-button-prev',
+            nextEl: '.discounts .swiper-card-wrapper .swiper-button-next',
+            prevEl: '.discounts .swiper-card-wrapper .swiper-button-prev',
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+            },
+            992: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+            },
+            1200: {
+                slidesPerView: 4,
+                slidesPerGroup: 4,
+            },
+        }
+    });
+
+    const noveltySwiperCard = new Swiper(".novelty .swiper-card", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        // autoHeight: true,
+        grabCursor: true,
+        navigation: {
+            nextEl: '.novelty .swiper-card-wrapper .swiper-button-next',
+            prevEl: '.novelty .swiper-card-wrapper .swiper-button-prev',
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+            },
+            992: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+            },
+            1200: {
+                slidesPerView: 4,
+                slidesPerGroup: 4,
+            },
+        }
+    });
+
+    const matchedSwiperCard = new Swiper(".matched-for-you .swiper-card", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        // autoHeight: true,
+        grabCursor: true,
+        navigation: {
+            nextEl: '.matched-for-you .swiper-card-wrapper .swiper-button-next',
+            prevEl: '.matched-for-you .swiper-card-wrapper .swiper-button-prev',
         },
         breakpoints: {
             576: {
@@ -122,8 +167,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         autoHeight: true,
         grabCursor: true,
         navigation: {
-            nextEl: '.swiper-action .swiper-button-next',
-            prevEl: '.swiper-action .swiper-button-prev',
+            nextEl: '.swiper-action-wrapper .swiper-button-next',
+            prevEl: '.swiper-action-wrapper .swiper-button-prev',
         },
         breakpoints: {
             576: {
@@ -184,8 +229,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         autoHeight: true,
         grabCursor: true,
         navigation: {
-            nextEl: '.swiper-reviews-nav .swiper-outside-button-next',
-            prevEl: '.swiper-reviews-nav .swiper-outside-button-prev',
+            nextEl: '.swiper-reviews-wrapper .swiper-button-next',
+            prevEl: '.swiper-reviews-wrapper .swiper-button-prev',
         },
         breakpoints: {
             576: {
@@ -210,8 +255,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
             rows: 2,
         },
         navigation: {
-            nextEl: '.swiper-brands-nav .swiper-outside-button-next',
-            prevEl: '.swiper-brands-nav .swiper-outside-button-prev',
+            nextEl: '.swiper-brands-wrapper .swiper-button-next',
+            prevEl: '.swiper-brands-wrapper .swiper-button-prev',
         },
         breakpoints: {
             576: {
