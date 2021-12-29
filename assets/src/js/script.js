@@ -1,5 +1,22 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 
+    // const dropdownToggleEl = document.querySelector('.btn-menu.dropdown-toggle')
+    // const dropdownList = new bootstrap.Dropdown(dropdownToggleEl);
+    // dropdownList.show();
+
+    let menuElements = document.querySelectorAll('.catalog-menu>ul>li')
+    menuElements.forEach(function(el) {
+        el.addEventListener("mouseover", function() {
+            menuElements.forEach(function(el) {
+                el.classList.remove('active');
+            });
+            el.classList.add('active');
+            // console.log(el)
+        }, false);
+    });
+
+
+
     const swiperMain = new Swiper(".swiper-main", {
         loop: true,
         grabCursor: true,
