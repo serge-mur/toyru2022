@@ -223,9 +223,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
             // },
         }
     });
-
-    swiperCharacters.slideTo(2, false, false);
-    getCharacter();
+    if (document.querySelector(".swiper-characters")) {
+        swiperCharacters.slideTo(2, false, false);
+        getCharacter();
+    }
     swiperCharacters.on('slideChange', function() {
         getCharacter();
     });
@@ -319,3 +320,22 @@ function mediaChange(e) {
 }
 mediaQueryMobile.addListener(mediaChange)
 mediaChange(mediaQueryMobile)
+
+const swiperAdvantage = new Swiper(".swiper-advantage", {
+    slidesPerView: 2.5,
+    slidesPerGroup: 1,
+    spaceBetween: 5,
+    freeMode: true,
+    autoHeight: true,
+    grabCursor: true,
+    breakpoints: {
+        576: {
+            slidesPerView: 6,
+            slidesPerGroup: 6,
+        },
+        992: {
+            slidesPerView: 6,
+            slidesPerGroup: 6,
+        },
+    }
+});

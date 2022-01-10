@@ -958,6 +958,16 @@ a {
     }
 }
 
+// *************
+// category page
+// *************
+.category {
+    .category-name {
+        @include font-size(44px);
+        font-weight: 700;
+    }
+}
+
 // sliders css
 .swiper-main {
     .swiper-button-prev,
