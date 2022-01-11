@@ -321,21 +321,50 @@ function mediaChange(e) {
 mediaQueryMobile.addListener(mediaChange)
 mediaChange(mediaQueryMobile)
 
-const swiperAdvantage = new Swiper(".swiper-advantage", {
-    slidesPerView: 2.5,
-    slidesPerGroup: 1,
-    spaceBetween: 5,
-    freeMode: true,
+// category
+
+const swiperTags = new Swiper(".swiper-tags", {
+    slidesPerView: 1.5,
+    spaceBetween: 20,
+    // freeMode: true,
     autoHeight: true,
     grabCursor: true,
+    watchSlidesProgress: true,
+    navigation: {
+        nextEl: '.tags-block .swipper-tags-nav .swiper-button-next',
+        prevEl: '.tags-block .swipper-tags-nav .swiper-button-prev',
+    },
     breakpoints: {
         576: {
-            slidesPerView: 6,
-            slidesPerGroup: 6,
+            slidesPerView: 3.5,
+            slidesPerGroup: 3
+        },
+        992: {
+            slidesPerView: 4.5,
+            slidesPerGroup: 3
+        },
+    }
+});
+
+const swiperAdvantage = new Swiper(".swiper-advantage", {
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 60,
+    autoHeight: true,
+    grabCursor: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        576: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
         },
         992: {
             slidesPerView: 6,
             slidesPerGroup: 6,
+            spaceBetween: 60,
         },
     }
 });
