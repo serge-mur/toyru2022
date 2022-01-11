@@ -46,8 +46,25 @@ $breadcrumb-active-color: $body-color;
 $breadcrumb-divider: quote("/");
 $breadcrumb-divider-flipped: $breadcrumb-divider;
 // check
+$form-check-input-width: 1.5em;
+$form-check-input-bg: #fff;
+$form-check-input-border: 1px solid #E95322;
 $form-check-input-border-radius: 0;
 $form-check-input-checked-bg-color: #E95322;
+// select
+$form-select-padding-y: 12px;
+$form-select-padding-x: 20px;
+$form-select-bg: #fff;
+$form-select-border-color: rgba(233, 83, 34, 0.3);
+// pagination
+$pagination-padding-y: 15px;
+$pagination-padding-x: 20px;
+$pagination-color: $body-color;
+$pagination-border-radius: 0;
+$pagination-border-color: rgba(233, 83, 34, 0.3);
+$pagination-active-color: #E95322;
+$pagination-active-bg: #fff;
+$pagination-active-border-color: #E95322;
 // @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
 @import './assets/src/style/font.scss';
 @import './node_modules/bootstrap/scss/bootstrap.scss';
@@ -140,6 +157,14 @@ a {
     .breadcrumb-item {
         a {
             @include reset-link();
+        }
+    }
+}
+
+.pagination {
+    .page-item {
+        .page-link {
+            margin-right: 20px;
         }
     }
 }
@@ -1070,6 +1095,93 @@ a {
         .sorting-btn {
             border: 1px solid rgba(233, 83, 34, 0.3);
             height: 50px;
+            padding: 8px 30px;
+        }
+        .mob-filters-toggle {
+            height: 50px;
+            width: 115px;
+        }
+    }
+    .category-grid {
+        margin-bottom: 30px;
+        @include media-breakpoint-down(sm) {
+            .card-preview {
+                padding: 12px;
+                .label-block {
+                    .label {
+                        font-size: 12px;
+                        padding: 4px 6px;
+                        margin-right: 8px;
+                    }
+                }
+                .img-block {
+                    margin-bottom: 15px;
+                }
+                .middle-block {
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    align-items: flex-start;
+                    margin-bottom: 20px;
+                    .name {
+                        order: 1;
+                        @include reset-link();
+                        font-size: 14px;
+                        font-weight: 400;
+                        height: 44px;
+                    }
+                    .rating {
+                        order: 0;
+                        display: flex;
+                        align-items: center;
+                        color: $body-color;
+                        font-size: 13px;
+                        opacity: .5;
+                    }
+                }
+                .bottom-block {
+                    display: flex;
+                    justify-content: space-between;
+                    height: 48px;
+                    .price-block {
+                        display: flex;
+                        justify-content: flex-start;
+                        flex-wrap: wrap;
+                        align-items: flex-start;
+                        .price {
+                            order: 1;
+                            font-size: 16px;
+                            font-weight: 700;
+                            margin-right: 0;
+                        }
+                        .price-old {
+                            order: 0;
+                            font-size: 12px;
+                        }
+                    }
+                    .btn {
+                        width: 70px;
+                    }
+                }
+            }
+        }
+    }
+    .category-bottom {
+        margin: 40px 0;
+        @include media-breakpoint-up(sm) {
+            margin-bottom: 120px;
+        }
+        .btn-lazyload {
+            color: #E95322;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: rgba(233, 83, 34, 0.1);
+            padding: 12px 65px 12px 65px;
+            &:hover {
+                color: #E95322;
+            }
+            margin-bottom: 1rem;
+            width: 100%;
         }
     }
     .matched-for-you-block {
@@ -1086,22 +1198,6 @@ a {
         background: linear-gradient(267.78deg, #5DC4D2 3.17%, #076B79 99.76%);
         padding: 45px 0;
         .swiper-advantage {
-            position: relative;
-            .swiper-button-prev,
-            .swiper-button-next {
-                position: absolute;
-                display: block;
-                top: calc(50% - 24px/2);
-                width: 48px;
-                height: 24px;
-                z-index: 10;
-                cursor: pointer;
-                &.swiper-button-disabled {
-                    opacity: 0.35;
-                    cursor: auto;
-                    pointer-events: none;
-                }
-            }
             .swiper-button-prev {
                 background-image: url(../img/icons/review_slider_left.svg);
                 left: 0;
@@ -1165,6 +1261,34 @@ a {
             margin-bottom: 30px;
         }
     }
+    .filters-block {
+        .filter-item {
+            box-shadow: inset 0px -1px 0px rgba(51, 51, 51, 0.1);
+            padding: 15px 0 30px 0;
+            .filter-title {
+                color: $body-color;
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+        }
+        .confirm-btn {
+            width: 100%;
+            height: 50px;
+            text-transform: uppercase;
+        }
+        .reset-btn {
+            color: #E95322;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: rgba(233, 83, 34, 0.1);
+            padding: 12px 30px 12px 30px;
+            &:hover {
+                color: #E95322;
+            }
+            width: 100%;
+        }
+    }
 }
 
 // sliders css
@@ -1204,7 +1328,8 @@ a {
 .swiper-action-wrapper,
 .swiper-card-wrapper,
 .swiper-reviews-wrapper,
-.swiper-brands-wrapper {
+.swiper-brands-wrapper,
+.swiper-advantage {
     position: relative;
     .swiper-button-prev,
     .swiper-button-next {
