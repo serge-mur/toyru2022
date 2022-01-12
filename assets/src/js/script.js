@@ -368,3 +368,40 @@ const swiperAdvantage = new Swiper(".swiper-advantage", {
         },
     }
 });
+
+// product
+
+const swiperProductThumbs = new Swiper(".swiper-product-thumbs", {
+    direction: "vertical",
+    slidesPerView: 6,
+    slidesPerGroup: 6,
+    spaceBetween: 20,
+    freeMode: true,
+    autoHeight: true,
+    grabCursor: true,
+    watchSlidesProgress: true,
+    // breakpoints: {
+    //     576: {
+    //         slidesPerView: 6,
+    //         slidesPerGroup: 3
+    //     },
+    //     992: {
+    //         slidesPerView: 6,
+    //         slidesPerGroup: 3
+    //     },
+    // }
+});
+const swiperProduct = new Swiper(".swiper-product", {
+    // loop: true,
+    grabCursor: true,
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    navigation: {
+        nextEl: '.swiper-main .swiper-button-next',
+        prevEl: '.swiper-main .swiper-button-prev',
+    },
+    thumbs: {
+        swiper: swiperProductThumbs,
+    },
+});

@@ -1291,6 +1291,122 @@ a {
     }
 }
 
+// ***********
+// detail page
+// ***********
+.detail {
+    .swiper-product-thumbs {
+        .swiper-slide-thumb-active {
+            border: 1px solid red;
+        }
+    }
+    .detail-block {
+        .top-block {
+            border-bottom: 1px solid #e5e5e5;
+            .rating {
+                display: inline-block;
+                color: $body-color;
+                font-size: 18px;
+                font-weight: 700;
+            }
+            .status {
+                color: #247783;
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+        .specification-block {
+            border-bottom: 1px solid #e5e5e5;
+            .specification1,
+            .specification2 {
+                div {
+                    color: rgba(51, 51, 51, .5);
+                    font-size: 14px;
+                    span {
+                        color: $body-color;
+                    }
+                }
+            }
+        }
+        .buy-block {
+            @include media-breakpoint-down(sm) {
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                background: #fff;
+                z-index: 999;
+            }
+            .price {
+                color: $body-color;
+                font-size: 36px;
+                font-weight: bold;
+            }
+            .old-price {
+                color: $body-color;
+                font-size: 16px;
+                text-decoration-line: line-through;
+                opacity: .5;
+            }
+            .points {
+                display: flex;
+                span {
+                    color: #E95322;
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+            .btn-buy {
+                color: #fff;
+                font-size: 13px;
+                font-weight: 700;
+                text-transform: uppercase;
+                height: 54px;
+                width: 100%;
+            }
+        }
+        .bottom-block {
+            .brand-link {
+                display: flex;
+                align-items: center;
+                padding: 30px;
+                height: 100%;
+                border: 1px solid #e5e5e5;
+                @include reset-link();
+                img {
+                    margin-right: 20px;
+                }
+                div {
+                    color: rgba(51, 51, 51, .5);
+                    font-size: 14px;
+                    span {
+                        color: #E95322;
+                    }
+                }
+            }
+            .delivery-block {
+                height: 100%;
+                padding: 30px;
+                background-color: rgba(233, 83, 34, 0.1);
+                ul {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        color: $body-color;
+                        font-size: 14px;
+                        font-weight: 400;
+                        span {
+                            font-weight: 700;
+                        }
+                        background: url(../img/icons/list_point.svg) left center no-repeat;
+                        padding: 10px 0 10px 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 // sliders css
 .swiper-main {
     .swiper-button-prev,
