@@ -39,22 +39,21 @@
             </div>
         </div>
     </div>
-    <div class="header-main-block">
+    <div class="header-main-block d-none d-lg-block">
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-auto">
                     <a href="/">
-                        <img class="img-fluid d-none d-lg-inline" src="@@webRoot/img/logo.svg" alt="">
-                        <img class="img-fluid d-lg-none" src="@@webRoot/img/logo_mob.svg" alt="">
+                        <img class="img-fluid" src="@@webRoot/img/logo.svg" alt="">
                     </a>
                 </div>
-                <div class="col-auto d-none d-lg-block">
+                <div class="col-auto">
                     <button class="btn btn-gradient btn-menu dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"><img src="@@webRoot/img/icons/menu.svg" alt=""> Меню</button>
                     <div class="dropdown-menu dropdown-desktop-menu" data-bs-popper="none">
                         @@include('./dropdow-megamenu.html')
                     </div>
                 </div>
-                <div class="col-lg d-none d-lg-block">
+                <div class="col">
                     <div class="search-block">
                         <input class="form-control" type="search" placeholder="Поиск по каталогу" aria-label="Поиск по каталогу">
                     </div>
@@ -70,7 +69,7 @@
                         <a href="#" class="icon-menu-item">
                             <img src="@@webRoot/img/icons/heart.svg" alt="">
                         </a>
-                        <a href="#" class="btn btn-gradient d-none d-lg-flex btn-cart">
+                        <a href="#" class="btn btn-gradient btn-cart">
                             <img src="@@webRoot/img/icons/cart.svg" alt=""> <span>2</span>
                         </a>
                     </div>
@@ -83,12 +82,17 @@
 
     <div class="header-mobile-block d-lg-none">
         <div class="container">
-            <div class="row">
-                <div class="col-7">
-                    <button class="btn btn-gradient2 btn-menu" data-bs-toggle="offcanvas" href="#offcanvasMenu" role="button" aria-controls="offcanvasMenu"><img src="@@webRoot/img/icons/menu.svg" alt="">Меню</button>
+            <div class="row align-items-center justify-content-between">
+                <div class="col d-flex flex-nowrap">
+                    <button class="btn mob-menu-trigger" data-bs-toggle="offcanvas" href="#offcanvasMenu" role="button" aria-controls="offcanvasMenu"><img src="@@webRoot/img/icons/burger_mob.svg" alt=""></button>
+                    <button class="btn mob-search-trigger"><img src="@@webRoot/img/icons/search_mob.svg" alt=""></button>
                 </div>
-                <div class="col-5">
-                    <button class="btn btn-gradient btn-cart"><img src="@@webRoot/img/icons/cart.svg" alt=""> <span>2</span></button>
+                <div class="col">
+                    <img class="img-fluid" src="@@webRoot/img/logo_mob.svg" alt="">
+                </div>
+                <div class="col d-flex flex-nowrap">
+                    <a href="#" class="btn mob-profile-link"><img src="@@webRoot/img/icons/profile_mob.svg" alt=""></a>
+                    <a href="#" class="btn mob-cart-link"><img src="@@webRoot/img/icons/shopping_cart_mob.svg" alt=""> <span>2</span></a>
                 </div>
             </div>
         </div>

@@ -252,7 +252,7 @@ a {
 .header {
     .header-top-block {
         background: linear-gradient(to right, #0091A6, #A2DAE2);
-        padding: 5px 0;
+        padding: 0;
         .city-selection {
             color: #fff;
             font-size: 14px;
@@ -282,7 +282,9 @@ a {
                 padding-right: 0;
             }
         }
-        @include media-breakpoint-up(sm) {}
+        @include media-breakpoint-up(sm) {
+            padding: 5px 0;
+        }
     }
     .header-main-block {
         padding: 10px 0 10px 0;
@@ -344,19 +346,29 @@ a {
     }
     .header-mobile-block {
         padding: 15px 0;
-        .btn-menu {
-            width: 100%;
-            height: 46px;
-            font-size: 15px;
-            font-weight: 700;
-            text-transform: uppercase;
-            img {
-                margin-right: 15px;
-            }
+        .btn {
+            padding: 0;
         }
-        .btn-cart {
-            width: 100%;
-            height: 46px;
+        .mob-menu-trigger {
+            margin-right: 20px;
+        }
+        .mob-cart-link {
+            margin-left: 20px;
+            position: relative;
+            span {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                top: 0;
+                right: 0;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                color: #fff;
+                background-color: red;
+                font-size: 6px;
+            }
         }
     }
 }
