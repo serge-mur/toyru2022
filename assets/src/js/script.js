@@ -1,9 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 
-    // const dropdownToggleEl = document.querySelector('.btn-menu.dropdown-toggle')
-    // const dropdownList = new bootstrap.Dropdown(dropdownToggleEl);
-    // dropdownList.show();
-
     let menuElements = document.querySelectorAll('.catalog-menu>ul>li')
     menuElements.forEach(function(el) {
         el.addEventListener("mouseover", function() {
