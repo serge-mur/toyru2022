@@ -223,6 +223,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         swiperCharacters.slideTo(2, false, false);
         getCharacter();
     }
+
     swiperCharacters.on('slideChange', function() {
         getCharacter();
     });
@@ -312,6 +313,7 @@ function mediaChange(e) {
             el.disabled = true
             el.parentNode.querySelector('.collapse').classList.add('show')
         });
+
     }
 }
 mediaQueryMobile.addListener(mediaChange)
@@ -365,6 +367,19 @@ const swiperAdvantage = new Swiper(".swiper-advantage", {
     }
 });
 
+if (document.querySelector('.mob-filters-toggle')) {
+    document.querySelector('.mob-filters-toggle').addEventListener('click', function() {
+        document.body.style.overflow = 'hidden';
+        document.querySelector('.filters-block').style.display = 'block';
+    });
+    document.querySelector('.filters-block .offcanvas-header').addEventListener('click', function() {
+        document.body.style.overflow = 'auto';
+        document.querySelector('.filters-block').style.display = 'none';
+
+    });
+}
+
+
 // product
 
 const swiperProductThumbs = new Swiper(".swiper-product-thumbs", {
@@ -389,6 +404,7 @@ const swiperProductThumbs = new Swiper(".swiper-product-thumbs", {
 });
 const swiperProduct = new Swiper(".swiper-product", {
     // loop: true,
+    autoHeight: true,
     grabCursor: true,
     pagination: {
         el: '.swiper-pagination',
