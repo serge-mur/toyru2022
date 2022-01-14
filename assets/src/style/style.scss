@@ -380,28 +380,47 @@ a {
 
 #offcanvasMenu {
     .offcanvas-body {
-        background-color: #e5e5e5;
+        background-color: #fff;
         .mobile-catalog-menu {
             // background-color: #247783;
             .accordion-item {
                 background-color: transparent;
                 border: none;
                 .accordion-button {
+                    &.collapsed {
+                        color: $body-color;
+                    }
                     background-color: transparent;
+                    color: #E95322;
                     box-shadow: none;
-                    font-weight: bold;
-                    padding-left: .75rem;
+                    font-size: 16px;
+                    font-weight: 500;
+                    padding: 10px 10px 10px 0;
+                    img {
+                        margin-right: 10px;
+                    }
                 }
-                .accordion-collapse {}
+                .accordion-collapse {
+                    padding-left: 16px;
+                    background-color: rgba(233, 83, 34, 0.1);
+                    .nav {
+                        .nav-link {
+                            color: $body-color;
+                            font-size: 16px;
+                            font-weight: 400;
+                        }
+                    }
+                }
             }
             margin-bottom: 30px;
         }
         .mobile-menu-bottom {
-            // background-color: #247783;
-            background-color: rgba(233, 83, 34, 0.1);
-            // background-color: #e5e5e5;
+            border-top: 1px solid #e5e5e5;
+            padding-top: 20px;
             .nav-link {
-                font-weight: bold;
+                color: $body-color;
+                font-size: 16px;
+                font-weight: 500;
             }
         }
     }
