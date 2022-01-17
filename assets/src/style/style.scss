@@ -1537,6 +1537,25 @@ a {
             }
         }
     }
+    .stores-block {
+        background: linear-gradient(267.78deg, #5DC4D2 3.17%, #076B79 88.19%);
+        @include media-breakpoint-up(sm) {
+            .tab-content {
+                display: flex;
+                >.tab-pane {
+                    display: block;
+                    opacity: 1;
+                    width: 50%;
+                    &#pills-map {
+                        order: 1;
+                    }
+                    &#pills-list {
+                        order: 0;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // sliders css
