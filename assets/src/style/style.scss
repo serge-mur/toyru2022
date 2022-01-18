@@ -936,17 +936,8 @@ a {
         }
     }
     .about {
-        background: url(../img/about_bg.png) bottom center no-repeat;
-        padding-top: 260px;
-        .slogan-img {
-            position: relative;
-            height: 100%;
-            img {
-                position: absolute;
-                right: 0;
-                bottom: 0;
-            }
-        }
+        background: url(../img/about_left_char.png) bottom left no-repeat, url(../img/about_center_char.png) bottom center no-repeat, url(../img/about_right_char.png) bottom right no-repeat, url(../img/about_line_bg.png) bottom center no-repeat, url(../img/about_bg.png) center right no-repeat;
+        padding: 200px 0 445px 0;
         .content-block {
             p {
                 font-size: 18px;
@@ -957,6 +948,24 @@ a {
                 margin-bottom: 50px;
             }
         }
+        @include media-breakpoint-down(sm) {
+            background: url(../img/about_mob_bg_bg.png) top right no-repeat, url(../img/about_mob_bg.png) bottom right no-repeat;
+            padding: 20px 0 0 0;
+            .slogan-img {
+                margin-bottom: 20px;
+            }
+            .content-block {
+                p {
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+                .btn {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+    .advantage {
         .advantage-block {
             margin: 40px 0 0 0;
             .advantage-item {
@@ -973,25 +982,6 @@ a {
             @include media-breakpoint-down(sm) {
                 .advantage-item {
                     margin-bottom: 20px;
-                }
-            }
-        }
-        @include media-breakpoint-down(sm) {
-            background: url(../img/about_mob_bg.png) top center no-repeat;
-            background-size: contain;
-            background-position: left 10px top;
-            padding-top: 280px;
-            .slogan-img {
-                display: none;
-            }
-            .content-block {
-                padding-right: 120px;
-                p {
-                    font-size: 14px;
-                    font-weight: 500;
-                }
-                .btn {
-                    margin-bottom: 50px;
                 }
             }
         }
