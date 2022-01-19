@@ -56,9 +56,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
         },
         breakpoints: {
             576: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+            },
+            992: {
                 slidesPerView: 4,
-                slidesPerGroup: 4,
-            }
+                slidesPerGroup: 4
+            },
         }
     });
 
@@ -86,9 +90,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         loop: true,
         grabCursor: true,
         spaceBetween: 15,
-        // pagination: {
-        //     el: '.swiper-pagination',
-        // },
         navigation: {
             nextEl: '.swipper-trends-nav .swiper-button-next',
             prevEl: '.swipper-trends-nav .swiper-button-prev',
@@ -185,12 +186,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
         },
         breakpoints: {
             576: {
-                slidesPerView: 3,
-                slidesPerGroup: 1,
+                slidesPerView: 2,
+                slidesPerGroup: 2,
             },
             992: {
                 slidesPerView: 3,
-                slidesPerGroup: 1,
+                slidesPerGroup: 3,
             },
         }
     });
@@ -249,8 +250,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         },
         breakpoints: {
             576: {
-                slidesPerView: 3,
-                slidesPerGroup: 3,
+                slidesPerView: 2,
+                slidesPerGroup: 2,
             },
             992: {
                 slidesPerView: 3,

@@ -227,6 +227,7 @@ a {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
             .price {
                 font-size: 24px;
                 font-weight: 700;
@@ -238,6 +239,14 @@ a {
                 text-decoration-line: line-through;
                 opacity: .5;
                 white-space: nowrap;
+            }
+            @include media-breakpoint-down(xl) {
+                .price {
+                    order: 0;
+                }
+                .price-old {
+                    order: 1;
+                }
             }
         }
         .btn-buy {
@@ -721,6 +730,7 @@ a {
             background-color: #FFF3E8;
             overflow-x: hidden;
             padding: 20px;
+            margin-bottom: 20px;
             .age-item {
                 text-align: center;
                 text-decoration: none;
@@ -842,7 +852,7 @@ a {
             &.banner5 {
                 background: linear-gradient(267.5deg, #1261D8 -0.24%, #60CFFF 99.76%);
             }
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(lg) {
                 margin-bottom: 30px;
             }
         }
@@ -851,7 +861,7 @@ a {
         }
         .card-preview {
             margin: 0 15px 15px 15px;
-            @include media-breakpoint-up(sm) {
+            @include media-breakpoint-up(lg) {
                 margin: 0;
             }
         }
@@ -1735,6 +1745,9 @@ a {
     }
 }
 
+// ************
+// content page
+// ************
 .content {
     .content-title {
         @include font-size(44px);
