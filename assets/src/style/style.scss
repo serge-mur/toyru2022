@@ -1735,6 +1735,15 @@ a {
     }
 }
 
+.content {
+    .content-title {
+        @include font-size(44px);
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    .main-block {}
+}
+
 // sliders css
 .swiper-main {
     .swiper-button-prev,

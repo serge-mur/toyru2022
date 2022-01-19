@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    @@include('./template/head.html', {"name": "content page"})
+</head>
+
+<body>
+    <div class="page-wrapper">
+        @@include('./template/header.html') @@include('./template/no_main.html')
+
+        <main class="content">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Контентная страница</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="content-title">Заголовок контентной страницы</h1>
+                    </div>
+                    <div class="d-none d-lg-block col-lg-3 pe-4">
+                        <div class="content-sidebar">
+                            <div class="mb-4">
+                                @@include('./template/card_preview_02.html')
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-lg-9">
+                        <div class="main-block">
+                            <h3>TOY.RU – это:</h3>
+                            <ul>
+                                <li>Федеральная розничная сеть магазинов детских игрушек, которая насчитывает 71 магазин по России — от Санкт-Петербурга до Владивостока.</li>
+                                <li>В этом году TOY.RU в третий раз подряд получает премию Retailer of the Year Russia. Компания стала победителем в главных номинациях: «Лучший сетевой магазин России» и «Лучший интернет-магазин России», а также «Лучший сетевой
+                                    магазин года 2020-2021» и «Лучший онлайн-магазин года 2020-2021» в категории «Дети».</li>
+                                <li>Магазин, в ассортимент которого входят такие бренды, как: L.O.L. Surprise, LEGO, Bey Blade, NERF, Barbie, Enchantimals, Hot Wheels, Hatchimals, Zapf Creation, Poopsie Surprise Unicorn, Smart Egg, Paw Patrol и другие.</li>
+                            </ul>
+
+                            <img class="img-fluid mb-4" src="img/video.png" alt="">
+
+                            <p>У нас представлен большой и разнообразный ассортимент игрушек по очень выгодным ценам. Знаменитые на весь мир конструкторы <a href="#">LEGO</a>, невероятно популярные очаровательные куколки <a href="#">L.O.L. Surprise</a>,
+                                спрятанные в многослойный шарик-сюрприз, игрушки, созданные по сюжетам любимых мультфильмов: «Черепашки Ниндзя», «Рев и заводная команда», «Щенячий патруль», «Тобот». Куклы «Принцессы Диснея», «Сказочный патруль»; интерактивные
+                                куклы Беби Борн. Мягкие игрушки Aurora, Disney, модели машинок Welly, самые разнообразные наборы для творчества , PLAY-DOH, бластеры Nerf, электромобили Peg-Perego, игрушки и наборы для малышей Fisher-Price и Mega Bloks
+                                , товары для игры на свежем воздухе от Little Tikes и даже множество самых разнообразных аксессуаров для праздника , которые помогут Вам устроить настоящую вечеринку для юных любителей приключений.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        @@include('./template/footer.html')
+    </div>
+
+    @@include('./template/offcanvas.html')
+
+</body>
+
+</html>
