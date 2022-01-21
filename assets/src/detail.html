@@ -45,6 +45,10 @@
                                 <div class="row">
                                     <div class="col-12 col-lg-10">
                                         <div class="swiper swiper-product">
+                                            <div class="label-block">
+                                                <div class="label label-discount">-10%</div>
+                                                <div class="label label-new">Новинка</div>
+                                            </div>
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
                                                     <img class="img-fluid" src="img/product/product_1.jpg" alt="">
@@ -114,14 +118,10 @@
                                                     <img class="img-fluid" src="img/product/product_8.jpg" alt="">
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <a href="#" class="view-360-button">
-                                                        <img src="img/icons/360.svg" alt="">
-                                                    </a>
+                                                    <img src="img/icons/360.svg" alt="">
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <a href="#" class="view-video-button">
-                                                        <img src="img/icons/play_btn.svg" alt="">
-                                                    </a>
+                                                    <img src="img/icons/play_btn.svg" alt="">
                                                 </div>
                                             </div>
                                             <div class="swiper-button-next"></div>
@@ -139,7 +139,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-12 col-lg-6">
                                             <div class="rating"><img src="img/icons/star.svg" alt=""> 4.5</div>
-                                            <a href="#" class="review-link">36 отзывов</a>
+                                            <a href="#reviews-block" class="review-link">36 отзывов</a>
                                         </div>
                                     </div>
                                 </div>
@@ -154,7 +154,7 @@
                                                     <div>Бренд: <a href="#">LEGO</a></div>
                                                     <div>Количество деталей: <span>326</span></div>
                                                 </div>
-                                                <a href="#" class="specification-link">Все характеристики</a>
+                                                <a href="#tabs-block" class="specification-link">Все характеристики</a>
                                             </div>
                                         </div>
                                         <div class="col-12 col-lg-6">
@@ -185,7 +185,17 @@
                                             </div>
                                         </div>
                                         <div class="col-6">
-                                            <button class="btn btn-gradient btn-buy"><img src="img/icons/shopping-cart.svg" alt=""> <span class="d-none d-lg-inline">Добавить</span> в корзину</button>
+                                            <div class="state-buy">
+                                                <button class="btn btn-gradient btn-buy"><img src="img/icons/shopping-cart.svg" alt=""> <span class="d-none d-lg-inline">Добавить</span> в корзину</button>
+                                            </div>
+                                            <div class="state-incart">
+                                                <button class="btn btn-incart">В корзине<br>Перейти</button>
+                                                <div class="counter-block">
+                                                    <button class="btn-count btn-decrease" disabled>-</button>
+                                                    <input type="text" readonly class="number-product" value="1">
+                                                    <button class="btn-count btn-increase">+</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -204,7 +214,7 @@
                                         <div class="col-12 col-lg-6">
                                             <div class="delivery-block">
                                                 <ul>
-                                                    <li>В наличии в <a href="#">20 магазинах</a></li>
+                                                    <li>В наличии в <a href="#stores-block">20 магазинах</a></li>
                                                     <li>Доставка 15 апреля <span>бесплатно</span></li>
                                                     <li>Самовывоз сегодня <span>бесплатно</span></li>
                                                 </ul>
@@ -218,7 +228,7 @@
                 </div>
             </div>
 
-            <div class="tabs-block">
+            <div class="tabs-block" id="tabs-block">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-lg-9">
@@ -275,7 +285,7 @@
                 </div>
             </div>
 
-            <div class="reviews-block">
+            <div class="reviews-block" id="reviews-block">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-lg-9">
@@ -330,7 +340,7 @@
                 </div>
             </div>
 
-            <div class="stores-block">
+            <div class="stores-block" id="stores-block">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-12 col-lg">

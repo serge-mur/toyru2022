@@ -383,6 +383,53 @@ if (document.querySelector('.mob-filters-toggle')) {
 
 // product
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        let specificationLink = document.querySelector('.specification-link');
+        if (anchor == specificationLink) {
+            let specificationTriggerEl = document.querySelector('#pills-specification-tab');
+            let specificationTab = new bootstrap.Tab(specificationTriggerEl);
+            specificationTab.show();
+        }
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+if (document.querySelector('.counter-block')) {
+
+    let numEl = document.querySelector('.number-product');
+    let num = parseInt(numEl.value);
+
+    document.querySelector('.counter-block .btn-decrease').addEventListener('click', function() {
+        num--;
+        numEl.value = num;
+        ifNum(num);
+    });
+
+    document.querySelector('.counter-block .btn-increase').addEventListener('click', function() {
+        num++;
+        numEl.value = num;
+        ifNum(num);
+    });
+
+    function ifNum(num) {
+        console.log(num);
+        if (num == 2) {
+            document.querySelector('.counter-block .btn-decrease').removeAttribute("disabled");
+        } else if (num == 1) {
+            document.querySelector('.counter-block .btn-decrease').setAttribute("disabled", "true");
+        } else if (num == 9) {
+            document.querySelector('.counter-block .btn-increase').setAttribute("disabled", "true");
+        }
+    }
+
+}
+
+
 const swiperProductThumbs = new Swiper(".swiper-product-thumbs", {
     direction: "vertical",
     slidesPerView: 6,
