@@ -12,7 +12,7 @@ $body-color: #333333;
 // Style anchor elements.
 $link-color: #E95322;
 $link-decoration: underline dotted;
-$link-hover-color: $primary;
+$link-hover-color: $link-color;
 $link-hover-decoration: none;
 // scss-docs-start border-radius-variables
 $border-radius: 0;
@@ -1394,6 +1394,9 @@ a {
         .slider-product-block {
             .swiper-product {
                 border: 1px solid #e5e5e5;
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 20px;
+                }
             }
             .swiper-product-thumbs {
                 .swiper-slide {
@@ -1415,8 +1418,6 @@ a {
                 border-top: 1px solid #e5e5e5;
             }
             .top-block {
-                // border-bottom: 1px solid #e5e5e5;
-                padding-bottom: 20px;
                 .rating {
                     display: inline-block;
                     color: $body-color;
@@ -1427,51 +1428,75 @@ a {
                 .review-link {
                     font-size: 14px;
                 }
-                .status {
-                    color: #247783;
-                    font-size: 14px;
-                    font-weight: 600;
-                    @include media-breakpoint-down(sm) {
-                        padding: 20px 0;
-                    }
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 20px;
                 }
             }
-            .specification-block {
-                // border-bottom: 1px solid #e5e5e5;
-                padding-bottom: 20px;
-                .specification1,
-                .specification2 {
+            .middle-block {
+                .specification-block {
+                    .specification-list {
+                        div {
+                            color: rgba(51, 51, 51, .5);
+                            font-size: 14px;
+                            margin-bottom: 10px;
+                            span {
+                                color: $body-color;
+                            }
+                        }
+                    }
+                    .specification-link {
+                        display: block;
+                        font-size: 14px;
+                        margin-top: 20px;
+                    }
+                    @include media-breakpoint-down(sm) {
+                        margin-bottom: 20px;
+                    }
+                }
+                .brand-link {
+                    display: flex;
+                    align-items: center;
+                    padding: 20px 30px 20px 0;
+                    height: 100%;
+                    @include reset-link();
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        margin-right: 20px;
+                    }
                     div {
                         color: rgba(51, 51, 51, .5);
                         font-size: 14px;
-                        margin-bottom: 10px;
                         span {
-                            color: $body-color;
+                            color: #E95322;
                         }
                     }
-                }
-                .specification-link {
-                    display: block;
-                    font-size: 14px;
-                    margin-top: 20px;
+                    @include media-breakpoint-down(sm) {
+                        margin-bottom: 20px;
+                    }
                 }
             }
             .buy-block {
-                .price {
-                    color: $body-color;
-                    font-size: 36px;
-                    font-weight: bold;
-                    // margin-right: 20px;
-                }
-                .old-price {
-                    color: $body-color;
-                    font-size: 16px;
-                    text-decoration-line: line-through;
-                    opacity: .5;
-                    // margin-right: 20px;
+                margin-bottom: 20px;
+                .price-block {
+                    text-align: right;
+                    .price {
+                        color: $body-color;
+                        font-size: 36px;
+                        font-weight: bold;
+                    }
+                    .old-price {
+                        color: $body-color;
+                        font-size: 16px;
+                        text-decoration-line: line-through;
+                        opacity: .5;
+                    }
                 }
                 .points {
                     display: flex;
+                    img {
+                        margin-right: 10px;
+                    }
                     span {
                         color: #E95322;
                         font-size: 14px;
@@ -1490,17 +1515,24 @@ a {
                     position: fixed;
                     bottom: 0;
                     right: 0;
+                    width: 100%;
                     background: #fff;
                     z-index: 999;
                     padding: 10px;
                     box-shadow: 0px -5px 5px rgba(51, 51, 51, .25);
-                    .price {
-                        font-size: 24px;
-                        margin-right: 10px;
-                    }
-                    .old-price {
-                        font-size: 14px;
-                        margin-right: 10px;
+                    .price-block {
+                        display: flex;
+                        flex-wrap: nowrap;
+                        justify-content: space-around;
+                        align-items: center;
+                        .price {
+                            font-size: 24px;
+                            margin-right: 10px;
+                        }
+                        .old-price {
+                            font-size: 14px;
+                            margin-right: 10px;
+                        }
                     }
                     .points {
                         display: flex;
@@ -1521,23 +1553,20 @@ a {
                 }
             }
             .bottom-block {
-                .brand-link {
-                    display: flex;
-                    align-items: center;
-                    padding: 20px 30px;
+                .info-block {
                     height: 100%;
+                    padding: 20px 30px;
                     border: 1px solid #e5e5e5;
-                    @include reset-link();
-                    img {
-                        width: 50px;
-                        height: 50px;
-                        margin-right: 20px;
-                    }
-                    div {
-                        color: rgba(51, 51, 51, .5);
-                        font-size: 14px;
-                        span {
-                            color: #E95322;
+                    ul {
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+                        li {
+                            color: $body-color;
+                            font-size: 14px;
+                            font-weight: 400;
+                            padding: 10px 0;
                         }
                     }
                 }
