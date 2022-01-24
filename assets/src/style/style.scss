@@ -1546,16 +1546,47 @@ a {
                     }
                 }
                 .state-incart {
+                    display: flex;
+                    display: none;
                     .btn-incart {
+                        display: flex;
+                        align-items: center;
                         color: #fff;
-                        background-color: #0D98AB;
                         font-size: 13px;
-                        font-weight: 400;
+                        font-weight: 700;
                         height: 54px;
                         width: 100%;
+                        text-transform: uppercase;
+                        margin-right: 20px;
+                        img {
+                            padding-right: 10px;
+                        }
                     }
                     .counter-block {
                         display: flex;
+                        .btn-count {
+                            width: 50px;
+                            height: 54px;
+                            background-color: #fff;
+                            border: 1px solid rgba(233, 83, 34, 0.3);
+                            &.btn-decrease {
+                                background: url(../img/icons/minus.svg) center center no-repeat;
+                            }
+                            &.btn-increase {
+                                background: url(../img/icons/plus.svg) center center no-repeat;
+                            }
+                            &:disabled {
+                                border: 1px solid #e5e5e5;
+                                opacity: .5;
+                            }
+                        }
+                        .number-product {
+                            width: 35px;
+                            height: 54px;
+                            font-size: 18px;
+                            text-align: center;
+                            border: 1px solid transparent;
+                        }
                     }
                 }
                 @include media-breakpoint-down(sm) {
@@ -1588,6 +1619,14 @@ a {
                             color: #E95322;
                             font-size: 14px;
                             line-height: 16px;
+                        }
+                    }
+                    .state-incart {
+                        .btn-incart {
+                            margin-right: 0;
+                        }
+                        .counter-block {
+                            display: none;
                         }
                     }
                 }

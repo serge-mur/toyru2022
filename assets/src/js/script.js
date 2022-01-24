@@ -399,7 +399,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-if (document.querySelector('.counter-block')) {
+if (document.querySelector('.state-buy .btn-buy')) {
+    document.querySelector('.state-buy .btn-buy').addEventListener('click', function() {
+        document.querySelector('.state-buy').style.display = 'none';
+        document.querySelector('.state-incart').style.display = 'flex';
+    });
+}
+
+if (document.querySelector('.state-incart .counter-block')) {
 
     let numEl = document.querySelector('.number-product');
     let num = parseInt(numEl.value);
@@ -418,17 +425,13 @@ if (document.querySelector('.counter-block')) {
 
     function ifNum(num) {
         console.log(num);
-        if (num == 2) {
+        if (num >= 2) {
             document.querySelector('.counter-block .btn-decrease').removeAttribute("disabled");
-        } else if (num == 1) {
+        } else {
             document.querySelector('.counter-block .btn-decrease').setAttribute("disabled", "true");
-        } else if (num == 9) {
-            document.querySelector('.counter-block .btn-increase').setAttribute("disabled", "true");
         }
     }
-
 }
-
 
 const swiperProductThumbs = new Swiper(".swiper-product-thumbs", {
     direction: "vertical",
@@ -463,5 +466,5 @@ const swiperProduct = new Swiper(".swiper-product", {
     },
     thumbs: {
         swiper: swiperProductThumbs,
-    },
+    }
 });
