@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    @@include('./template/head.html', {"name": "delivery and pay page"})
+</head>
+
+<body>
+    <div class="page-wrapper">
+        @@include('./template/header.html') @@include('./template/no_main.html')
+
+        <main class="content">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Доставка и оплата</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="content-title">Доставка и оплата</h1>
+                    </div>
+                    <div class="d-none d-lg-block col-lg-3 pe-4">
+                        <div class="content-sidebar">
+                            <div class="mb-4">
+                                @@include('./template/card_preview_02.html')
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-lg-9">
+                        <div class="tabs-block" id="tabs-block">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-lg-9">
+                                        <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
+                                            <li class="nav-item me-4" role="presentation">
+                                                <button class="nav-link active" id="pills-delivery-tab" data-bs-toggle="pill" data-bs-target="#pills-delivery" type="button" role="tab" aria-controls="pills-delivery" aria-selected="true">Способы доставки</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="pills-pay-tab" data-bs-toggle="pill" data-bs-target="#pills-pay" type="button" role="tab" aria-controls="pills-pay" aria-selected="false">Способы оплаты</button>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content" id="pills-tabDeliveryAndPay">
+                                            <div class="tab-pane fade show active" id="pills-delivery" role="tabpanel" aria-labelledby="pills-delivery-tab">
+
+                                                <div class="accordion" id="accordionExample">
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                                Онлайн-оплата банковской картой на сайте*
+                                                        </button>
+                                                        </h2>
+                                                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                            <div class="accordion-body">
+                                                                <p>К оплате на сайте www.toy.ru принимаются банковские карты платежных систем Visa, MasterСard и МИР. Подробную инструкцию по оплате Вы можете посмотреть здесь. Платеж осуществляется через платежный
+                                                                    шлюз «ПАО Сбербанк». Для всех видов доставки получателю заказа необходимо предъявить паспорт.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingTwo">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                                Оплата банковской картой при получении заказа
+                                                        </button>
+                                                        </h2>
+                                                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                            <div class="accordion-body">
+                                                                <p>К оплате через платежный переносной терминал курьера принимаются банковские карты платежных систем Visa, MasterСard и МИР. Услуга распространяется на города: Москва, Санкт-Петербург, Казань,
+                                                                    Ростов-на Дону, Самара, Краснодар, Екатеринбург, Пермь, Уфа, Новосибирск. Более подробную информацию по условиям данного типа оплаты уточняйте у оператора при подтверждении заказа.</p>
+                                                                <p>К оплате через платежный терминал в магазине принимаются банковские карты платежных систем Visa, MasterСard и МИР.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingThree">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                                Наличные
+                                                        </button>
+                                                        </h2>
+                                                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                                            <div class="accordion-body">
+                                                                <p>При оплате наличными Вам выдадут товарный чек, гарантийный талон, копию бланка заказа.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="tab-pane fade" id="pills-pay" role="tabpanel" aria-labelledby="pills-pay-tab">
+                                                2
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        @@include('./template/footer.html')
+    </div>
+
+    @@include('./template/offcanvas.html')
+
+</body>
+
+</html>
