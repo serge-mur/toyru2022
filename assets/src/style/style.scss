@@ -65,6 +65,13 @@ $pagination-border-color: rgba(233, 83, 34, 0.3);
 $pagination-active-color: #E95322;
 $pagination-active-bg: #fff;
 $pagination-active-border-color: #E95322;
+// accordion
+$accordion-bg: #fff;
+$accordion-button-bg: #fff;
+$accordion-button-active-bg: #fff;
+$accordion-button-active-color: #E95322;
+$accordion-button-focus-border-color: #e5e5e5;
+$accordion-button-focus-box-shadow: none;
 // @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
 @import './assets/src/style/font.scss';
 @import './node_modules/bootstrap/scss/bootstrap.scss';
@@ -655,6 +662,7 @@ a {
                     opacity: .8;
                     font-size: 16px;
                     font-weight: 500;
+                    padding-left: 0;
                 }
             }
             @include media-breakpoint-up(sm) {
@@ -1872,6 +1880,22 @@ a {
         margin-bottom: 30px;
     }
     .main-block {}
+    .tabs-block {
+        .accordion-button {
+            font-weight: 700;
+        }
+        #pills-tab {
+            @include media-breakpoint-down(sm) {
+                .nav-item {
+                    flex: 1 1 auto;
+                    text-align: center;
+                    .nav-link {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // sliders css
