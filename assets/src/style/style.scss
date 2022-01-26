@@ -515,8 +515,34 @@ a {
                         left: 300px;
                         display: block;
                     }
+                    .menu-card {
+                        display: block;
+                    }
+                }
+                .menu-card {
+                    padding: 0 20px;
+                    position: absolute;
+                    top: 0;
+                    width: 300px;
+                    height: 100%;
+                    display: none;
+                    .menu-card-title {
+                        color: #E95322;
+                        font-size: 20px;
+                        font-weight: 700;
+                        margin-bottom: 20px;
+                    }
                 }
                 ul {
+                    &+div.menu-card {
+                        margin-left: 600px;
+                    }
+                    &+ul {
+                        margin-left: 300px;
+                        &+div.menu-card {
+                            margin-left: 900px;
+                        }
+                    }
                     position: absolute;
                     top: 0;
                     height: 100%;
@@ -536,15 +562,6 @@ a {
                     }
                 }
             }
-        }
-    }
-    .menu-card {
-        padding: 40px 0;
-        .menu-card-title {
-            color: #E95322;
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 20px;
         }
     }
 }
