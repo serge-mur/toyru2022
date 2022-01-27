@@ -105,6 +105,12 @@ a {
     text-underline-offset: 3px;
 }
 
+.content-title {
+    @include font-size(44px);
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
 .btn-gradient {
     background: linear-gradient(to right, #E95322, #FF8F00);
     border: transparent;
@@ -1759,6 +1765,7 @@ a {
         .reviews-total-block {
             background: linear-gradient(267.5deg, #FF8F00 -0.24%, #E95322 99.76%);
             padding: 30px;
+            margin-bottom: 80px;
             .review-rating {
                 color: #fff;
                 font-size: 36px;
@@ -1891,11 +1898,6 @@ a {
 // content page
 // ************
 .content {
-    .content-title {
-        @include font-size(44px);
-        font-weight: 700;
-        margin-bottom: 30px;
-    }
     .main-block {}
     .tabs-block {
         .accordion-button {
@@ -1909,6 +1911,73 @@ a {
                     .nav-link {
                         width: 100%;
                     }
+                }
+            }
+        }
+    }
+}
+
+// ************
+// stores page
+// ************
+.stores {
+    .map-block {
+        margin: 40px 0;
+    }
+    .stores-list-block {
+        .store-list-item {
+            padding: 20px 0;
+            margin-bottom: 20px;
+            .store-metro {
+                background: url(../img/icons/metro.svg) left center no-repeat;
+                padding-left: 30px;
+                color: $body-color;
+                font-size: 16px;
+                font-weight: 500;
+                margin-bottom: 10px;
+            }
+            .store-adress {
+                color: $body-color;
+                font-size: 16px;
+                font-weight: 500;
+                margin-bottom: 10px;
+            }
+            .store-metro-block {
+                display: flex;
+                .metro-marker {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background: #C4C4C4;
+                    margin-right: 15px;
+                }
+                .metro-name {
+                    color: $body-color;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+            .store-time-title {
+                color: $body-color;
+                font-size: 16px;
+                font-weight: 500;
+                opacity: .5;
+                margin-bottom: 10px;
+            }
+            .store-time-work {
+                color: $body-color;
+                font-size: 16px;
+                font-weight: 500;
+            }
+            .btn {
+                padding: 12px 30px 12px 30px;
+            }
+            &:hover {
+                background-color: rgba(255, 255, 255, 1);
+            }
+            @include media-breakpoint-down(sm) {
+                .store-time-title {
+                    display: none;
                 }
             }
         }
