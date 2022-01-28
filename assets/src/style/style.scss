@@ -45,17 +45,22 @@ $breadcrumb-divider-color: $body-color;
 $breadcrumb-active-color: $body-color;
 $breadcrumb-divider: quote("/");
 $breadcrumb-divider-flipped: $breadcrumb-divider;
+// form control
+$input-padding-y:12px;
+$input-padding-x: 20px;
+$input-bg: #fff;
+$input-border-color: rgba(233, 83, 34, 0.3);
+// select
+$form-select-padding-y: 12px;
+$form-select-padding-x: 20px;
+$form-select-bg: #fff;
+$form-select-border-color: rgba(233, 83, 34, 0.3);
 // check
 $form-check-input-width: 1.5em;
 $form-check-input-bg: #fff;
 $form-check-input-border: 1px solid #E95322;
 $form-check-input-border-radius: 0;
 $form-check-input-checked-bg-color: #E95322;
-// select
-$form-select-padding-y: 12px;
-$form-select-padding-x: 20px;
-$form-select-bg: #fff;
-$form-select-border-color: rgba(233, 83, 34, 0.3);
 // pagination
 $pagination-padding-y: 15px;
 $pagination-padding-x: 20px;
