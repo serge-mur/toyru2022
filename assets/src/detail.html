@@ -437,7 +437,93 @@
     </div>
 
     @@include('./template/offcanvas.html')
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                let specificationLink = document.querySelector('.specification-link');
+                if (anchor == specificationLink) {
+                    let specificationTriggerEl = document.querySelector('#pills-specification-tab');
+                    let specificationTab = new bootstrap.Tab(specificationTriggerEl);
+                    specificationTab.show();
+                }
 
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        if (document.querySelector('.state-buy .btn-buy')) {
+            document.querySelector('.state-buy .btn-buy').addEventListener('click', function() {
+                document.querySelector('.state-buy').style.display = 'none';
+                document.querySelector('.state-incart').style.display = 'flex';
+            });
+        }
+
+        if (document.querySelector('.state-incart .counter-block')) {
+
+            let numEl = document.querySelector('.number-product');
+            let num = parseInt(numEl.value);
+
+            document.querySelector('.counter-block .btn-decrease').addEventListener('click', function() {
+                num--;
+                numEl.value = num;
+                ifNum(num);
+            });
+
+            document.querySelector('.counter-block .btn-increase').addEventListener('click', function() {
+                num++;
+                numEl.value = num;
+                ifNum(num);
+            });
+
+            function ifNum(num) {
+                console.log(num);
+                if (num >= 2) {
+                    document.querySelector('.counter-block .btn-decrease').removeAttribute("disabled");
+                } else {
+                    document.querySelector('.counter-block .btn-decrease').setAttribute("disabled", "true");
+                }
+            }
+        }
+
+        const swiperProductThumbs = new Swiper(".swiper-product-thumbs", {
+            direction: "vertical",
+            slidesPerView: 6,
+            slidesPerGroup: 6,
+            spaceBetween: 20,
+            freeMode: true,
+            autoHeight: true,
+            grabCursor: true,
+            watchSlidesProgress: true,
+            // breakpoints: {
+            //     576: {
+            //         slidesPerView: 6,
+            //         slidesPerGroup: 3
+            //     },
+            //     992: {
+            //         slidesPerView: 6,
+            //         slidesPerGroup: 3
+            //     },
+            // }
+        });
+        const swiperProduct = new Swiper(".swiper-product", {
+            // loop: true,
+            autoHeight: true,
+            grabCursor: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-main .swiper-button-next',
+                prevEl: '.swiper-main .swiper-button-prev',
+            },
+            thumbs: {
+                swiper: swiperProductThumbs,
+            }
+        });
+    </script>
 </body>
 
 </html>

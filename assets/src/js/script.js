@@ -381,7 +381,7 @@ if (document.querySelector('.mob-filters-toggle')) {
 }
 
 
-// product
+/* // product
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -468,3 +468,5 @@ const swiperProduct = new Swiper(".swiper-product", {
         swiper: swiperProductThumbs,
     }
 });
+
+*/
