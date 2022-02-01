@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    @@include('./template/head.html', {"name": "news"})
+</head>
+
+<body>
+    <div class="page-wrapper">
+        @@include('./template/header.html') @@include('./template/no_main.html')
+
+        <main class="content">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Новости</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="content-title">Новости</h1>
+                    </div>
+                    <div class="d-none d-lg-block col-lg-3 pe-4">
+                        <div class="content-sidebar">
+                            <div class="mb-4">
+                                @@include('./template/card_preview_02.html')
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-lg-9">
+                        <div class="main-block">
+
+                            <div class="row news-block">
+                                <div class="col-12 col-lg-6 mb-4">
+                                    <div class="news-item">
+                                        <div class="news-img">
+                                            <img class="img-fluid" src="img/news/news_01.png" alt="">
+                                        </div>
+                                        <div class="news-description">
+                                            <div class="news-date">21.10.2021</div>
+                                            <div class="news-title">Скидки до 35% на бренд “Солнце и Луна” с 15 октября по 1 ноября</div>
+                                            <a class="btn btn-link float-end" href="#">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 mb-4">
+                                    <div class="news-item">
+                                        <div class="news-img">
+                                            <img class="img-fluid" src="img/news/news_01.png" alt="">
+                                        </div>
+                                        <div class="news-description">
+                                            <div class="news-date">21.10.2021</div>
+                                            <div class="news-title">Скидки до 35% на бренд “Солнце и Луна” с 15 октября по 1 ноября</div>
+                                            <a class="btn btn-link float-end" href="#">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 mb-4">
+                                    <div class="news-item">
+                                        <div class="news-img">
+                                            <img class="img-fluid" src="img/news/news_01.png" alt="">
+                                        </div>
+                                        <div class="news-description">
+                                            <div class="news-date">21.10.2021</div>
+                                            <div class="news-title">Скидки до 35% на бренд “Солнце и Луна” с 15 октября по 1 ноября</div>
+                                            <a class="btn btn-link float-end" href="#">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 mb-4">
+                                    <div class="news-item">
+                                        <div class="news-img">
+                                            <img class="img-fluid" src="img/news/news_01.png" alt="">
+                                        </div>
+                                        <div class="news-description">
+                                            <div class="news-date">21.10.2021</div>
+                                            <div class="news-title">Скидки до 35% на бренд “Солнце и Луна” с 15 октября по 1 ноября</div>
+                                            <a class="btn btn-link float-end" href="#">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        @@include('./template/footer.html')
+    </div>
+
+    @@include('./template/offcanvas.html')
+
+</body>
+
+</html>

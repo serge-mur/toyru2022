@@ -1920,6 +1920,32 @@ a {
             }
         }
     }
+    .news-block {
+        .news-item {
+            display: flex;
+            border: 1px solid #e5e5e5;
+            padding: 20px 20px 10px 20px;
+            height: 100%;
+            .news-img {
+                margin-right: 20px;
+                img {
+                    max-width: 100px;
+                    max-height: 100px;
+                }
+            }
+            .news-description {
+                .news-date {
+                    color: $body-color;
+                    font-size: 16px;
+                    opacity: .5;
+                }
+                .news-title {
+                    color: $body-color;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
 }
 
 // ************
