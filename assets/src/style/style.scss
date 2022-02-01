@@ -287,6 +287,49 @@ a {
     }
 }
 
+.map-block {
+    position: relative;
+    .store-balloon {
+        position: absolute;
+        width: 275px;
+        height: auto;
+        border: 1px solid #e5e5e5;
+        background-color: #fff;
+        padding: 8px;
+        z-index: 999;
+        .store-city {
+            color: $body-color;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+        .store-metro {
+            background: url(../img/icons/metro.svg) left center no-repeat;
+            padding-left: 30px;
+            color: $body-color;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+        .store-adress {
+            span {
+                color: #E95322;
+            }
+            color: $body-color;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+        .store-time {
+            color: $body-color;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+        .btn {
+            font-size: 12px;
+            text-transform: uppercase;
+            float: right;
+        }
+    }
+}
+
 // ******
 // header
 // ******
