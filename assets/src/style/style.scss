@@ -45,13 +45,19 @@ $breadcrumb-divider-color: $body-color;
 $breadcrumb-active-color: $body-color;
 $breadcrumb-divider: quote("/");
 $breadcrumb-divider-flipped: $breadcrumb-divider;
+// input
+$input-btn-padding-y: 12px;
+$input-btn-padding-x: 30px;
+// button
+$btn-padding-y: $input-btn-padding-y;
+$btn-padding-x: $input-btn-padding-x;
 // form control
-$input-padding-y:12px;
+$input-padding-y: $input-btn-padding-y;
 $input-padding-x: 20px;
 $input-bg: #fff;
 $input-border-color: rgba(233, 83, 34, 0.3);
 // select
-$form-select-padding-y: 12px;
+$form-select-padding-y: $input-btn-padding-y;
 $form-select-padding-x: 20px;
 $form-select-bg: #fff;
 $form-select-border-color: rgba(233, 83, 34, 0.3);
@@ -290,13 +296,13 @@ a {
 .map-block {
     position: relative;
     .store-balloon {
-        position: absolute;
-        width: 275px;
-        height: auto;
-        border: 1px solid #e5e5e5;
-        background-color: #fff;
-        padding: 8px;
-        z-index: 999;
+        // position: absolute;
+        // width: 275px;
+        // height: auto;
+        // border: 1px solid #e5e5e5;
+        // background-color: #fff;
+        // padding: 8px;
+        // z-index: 999;
         .store-city {
             color: $body-color;
             font-size: 12px;
@@ -1493,6 +1499,21 @@ a {
                 .label-new {
                     background-color: #247783;
                 }
+                .label-action {
+                    background-color: #F4AB3D;
+                }
+                .label-best-choice {
+                    background-color: #2E6FBD;
+                }
+                .label-best-price {
+                    background-color: #55B564;
+                }
+                .label-adv {
+                    background-color: #42C6D8;
+                }
+                .label-lego {
+                    background-color: #D93336;
+                }
             }
             .swiper-product {
                 .swiper-pagination {
@@ -1967,7 +1988,7 @@ a {
         .news-item {
             display: flex;
             border: 1px solid #e5e5e5;
-            padding: 20px 20px 10px 20px;
+            padding: 15px 15px 15px 15px;
             height: 100%;
             .news-img {
                 margin-right: 20px;
@@ -1977,6 +1998,8 @@ a {
                 }
             }
             .news-description {
+                position: relative;
+                width: 100%;
                 .news-date {
                     color: $body-color;
                     font-size: 16px;
@@ -1985,6 +2008,12 @@ a {
                 .news-title {
                     color: $body-color;
                     font-size: 16px;
+                }
+                .btn {
+                    position: absolute;
+                    bottom: -15px;
+                    right: -15px;
+                    padding: 15px 15px;
                 }
             }
         }
@@ -2000,8 +2029,9 @@ a {
     }
     .stores-list-block {
         .store-list-item {
-            padding: 20px 0;
+            padding: 20px;
             margin-bottom: 20px;
+            border: 1px solid #e5e5e5;
             .store-metro {
                 background: url(../img/icons/metro.svg) left center no-repeat;
                 padding-left: 30px;
