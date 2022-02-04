@@ -83,6 +83,10 @@ $accordion-button-active-bg: #fff;
 $accordion-button-active-color: #E95322;
 $accordion-button-focus-border-color: #e5e5e5;
 $accordion-button-focus-box-shadow: none;
+// modals
+$modal-inner-padding: 1.875rem;
+$modal-content-border-radius: 0;
+$modal-header-border-color: transparent;
 // @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
 @import './assets/src/style/font.scss';
 @import './node_modules/bootstrap/scss/bootstrap.scss';
@@ -332,6 +336,47 @@ a {
             font-size: 12px;
             text-transform: uppercase;
             float: right;
+        }
+    }
+}
+
+#citySelectionModal {
+    .modal-header {
+        padding-bottom: 0;
+        .modal-title {
+            font-size: 32px;
+            font-weight: 700;
+        }
+    }
+    .modal-body {
+        padding-top: 20px;
+        .city-column {
+            padding: 0;
+            list-style: none;
+            column-count: 5;
+            margin-top: 20px;
+            li {
+                a {
+                    display: block;
+                    color: $body-color;
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-decoration: none;
+                    white-space: nowrap;
+                    padding: 5px 0;
+                }
+                &.active {
+                    a {
+                        font-weight: 700;
+                    }
+                }
+            }
+            @include media-breakpoint-down(lg) {
+                column-count: 3;
+            }
+            @include media-breakpoint-down(sm) {
+                column-count: 2;
+            }
         }
     }
 }
