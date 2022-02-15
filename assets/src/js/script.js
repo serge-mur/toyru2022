@@ -196,45 +196,47 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
     });
 
-    const swiperCharacters = new Swiper(".swiper-characters", {
-        loop: true,
-        slidesPerView: 2,
-        centeredSlides: true,
-        spaceBetween: 50,
-        // autoHeight: true,
-        grabCursor: true,
-        navigation: {
-            nextEl: '.characters-nav .swiper-button-next',
-            prevEl: '.characters-nav .swiper-button-prev',
-        },
-        breakpoints: {
-            576: {
-                slidesPerView: 5,
-                spaceBetween: 50,
-                // slidesPerGroup: 5,
-
-            },
-            // 992: {
-            //     slidesPerView: 5,
-            //     slidesPerGroup: 5,
-            // },
-        }
-    });
     if (document.querySelector(".swiper-characters")) {
-        swiperCharacters.slideTo(2, false, false);
-        getCharacter();
-    }
 
-    swiperCharacters.on('slideChange', function() {
-        getCharacter();
-    });
+        const swiperCharacters = new Swiper(".swiper-characters", {
+            loop: true,
+            slidesPerView: 2,
+            centeredSlides: true,
+            spaceBetween: 50,
+            // autoHeight: true,
+            grabCursor: true,
+            navigation: {
+                nextEl: '.characters-nav .swiper-button-next',
+                prevEl: '.characters-nav .swiper-button-prev',
+            },
+            breakpoints: {
+                576: {
+                    slidesPerView: 5,
+                    spaceBetween: 50,
+                    // slidesPerGroup: 5,
 
-    function getCharacter() {
-        let el = swiperCharacters.slides[swiperCharacters.activeIndex];
-        let name = el.querySelector('.character-name').innerHTML;
-        let description = el.querySelector('.character-description').innerHTML;
-        document.querySelector('.characters-nav .characters-name').innerHTML = name;
-        document.querySelector('.characters-nav .characters-description').innerHTML = description;
+                },
+                // 992: {
+                //     slidesPerView: 5,
+                //     slidesPerGroup: 5,
+                // },
+            }
+        });
+
+        // swiperCharacters.slideTo(2, false, false);
+        getCharacter();
+
+        swiperCharacters.on('slideChange', function() {
+            getCharacter();
+        });
+
+        function getCharacter() {
+            let el = swiperCharacters.slides[swiperCharacters.activeIndex];
+            let name = el.querySelector('.character-name').innerHTML;
+            let description = el.querySelector('.character-description').innerHTML;
+            document.querySelector('.characters-nav .characters-name').innerHTML = name;
+            document.querySelector('.characters-nav .characters-description').innerHTML = description;
+        }
     }
 
     const swiperReviews = new Swiper(".swiper-reviews", {

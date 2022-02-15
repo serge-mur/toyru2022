@@ -83,18 +83,76 @@
 
                                 <div class="filter-item">
                                     <h3 class="filter-title">Магазин</h3>
+
                                     <select class="form-select mb-4" aria-label="select">
-                                    <option selected>Метро</option>
-                                    <option value="1">Метро 1</option>
-                                    <option value="2">Метро 2</option>
-                                    <option value="3">Метро 3</option>
-                                </select>
+                                        <option selected>Метро</option>
+                                        <option value="1">Метро 1</option>
+                                        <option value="2">Метро 2</option>
+                                        <option value="3">Метро 3</option>
+                                    </select>
+
                                     <select class="form-select" aria-label="select">
-                                    <option selected>Торговый центр</option>
-                                    <option value="1">Торговый центр 1</option>
-                                    <option value="2">Торговый центр 2</option>
-                                    <option value="3">Торговый центр 3</option>
-                                </select>
+                                        <option selected>Торговый центр</option>
+                                        <option value="1">Торговый центр 1</option>
+                                        <option value="2">Торговый центр 2</option>
+                                        <option value="3">Торговый центр 3</option>
+                                    </select>
+                                </div>
+
+                                <div class="filter-item">
+                                    <h3 class="filter-title">Цена, ₽</h3>
+                                    <!-- https://refreshless.com/nouislider/ -->
+                                    <div id="slider" class="mb-4"></div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="text" class="form-control" id="" placeholder="от 300">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="text" class="form-control" id="" placeholder="до 10000">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="filter-item">
+                                    <h3 class="filter-title">Пол</h3>
+
+                                    <div class="form-check">
+                                        <input class="btn-check" type="checkbox" value="" id="male" />
+                                        <label class="btn btn-label" for="male">Мальчик</label>
+
+                                        <input class="btn-check" type="checkbox" value="" id="female" />
+                                        <label class="btn btn-label" for="female">Девочка</label>
+                                    </div>
+
+                                </div>
+                                <div class="filter-item">
+                                    <h3 class="filter-title">Вид конструктора</h3>
+
+                                    <div class="form-check">
+                                        <input class="btn-check" type="checkbox" value="" id="id11" />
+                                        <label class="btn btn-label" for="id11">Космический корабль</label>
+
+                                        <input class="btn-check" type="checkbox" value="" id="id12" />
+                                        <label class="btn btn-label" for="id12">Роботы</label>
+
+                                        <input class="btn-check" type="checkbox" value="" id="id13" />
+                                        <label class="btn btn-label" for="id13">Военные</label>
+
+                                        <input class="btn-check" type="checkbox" value="" id="id14" />
+                                        <label class="btn btn-label" for="id14">Что то еще</label>
+
+                                        <div class="collapse" id="collapseExample123">
+                                            <input class="btn-check" type="checkbox" value="" id="id15" />
+                                            <label class="btn btn-label" for="id15">Возможны длинные названия</label>
+
+                                            <input class="btn-check" type="checkbox" value="" id="id15" />
+                                            <label class="btn btn-label" for="id15">Какое то еще название</label>
+                                        </div>
+
+                                        <button class="btn btn-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample123">
+                                            Ещё 9
+                                        </button>
+                                    </div>
 
                                 </div>
                                 <button class="btn btn-gradient confirm-btn mb-4">Показать (<span>54</span>)</button>
@@ -354,6 +412,21 @@
 
     @@include('./template/offcanvas.html')
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.1/nouislider.min.js" integrity="sha512-T5Bneq9hePRO8JR0S/0lQ7gdW+ceLThvC80UjwkMRz+8q+4DARVZ4dqKoyENC7FcYresjfJ6ubaOgIE35irf4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.1/nouislider.css" integrity="sha512-MKxcSu/LDtbIYHBNAWUQwfB3iVoG9xeMCm32QV5hZ/9lFaQZJVaXfz9aFa0IZExWzCpm7OWvp9zq9gVip/nLMg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <script>
+        var slider = document.getElementById('slider');
+
+        noUiSlider.create(slider, {
+            start: [20, 80],
+            connect: true,
+            range: {
+                'min': 0,
+                'max': 100
+            }
+        });
+    </script>
 </body>
 
 </html>
